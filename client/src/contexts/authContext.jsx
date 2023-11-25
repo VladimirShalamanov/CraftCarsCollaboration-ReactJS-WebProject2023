@@ -47,8 +47,8 @@ export const AuthProvider = ({
     };
 
     const values = {
-        loginSubmitHandler,
         registerSubmitHandler,
+        loginSubmitHandler,
         logoutHandler,
         username: auth.username || auth.email,
         email: auth.email,

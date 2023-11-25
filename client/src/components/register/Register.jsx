@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import Path from "../../paths";
+import Path from "../../utils/paths";
 import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/authContext";
 
