@@ -1,10 +1,53 @@
 header {
     position: absolute;
     z-index: 10;
-    padding: 30px 30px;
-    /* top: 0; */
-    /* left: 0; */
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 30px;
+    width: 100vw;
+    /* background-size: cover; */
+}
+
+.nav_menu {
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3em;
+    /* top: 10vh; */
+    right: 0;
+    width: 50%;
+    height: 50vh;
+    background: rgb(0, 28, 74);
+    transform: translateY(-130%);
+    transition: 0.4s ease-in-out;
+}
+
+.nav_active {
+    transform: translateY(10%);
+}
+
+.nav_toogle div {
+    width: 2.5rem;
+    height: 0.3rem;
+    margin: 0.4rem;
+    background-color: white;
+    transition: 0.2s ease-in;
+}
+
+.nav_toogle {
+    cursor: pointer;
+}
+
+.toogle .line1 {
+    transform: rotate(-45deg) translate(-10px, 5px);
+}
+
+.toogle .line2 {
+    opacity: 0;
+}
+
+.toogle .line3 {
+    transform: rotate(45deg) translate(-10px, -5px);
 }
