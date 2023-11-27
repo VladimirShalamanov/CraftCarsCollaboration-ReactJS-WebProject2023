@@ -1,0 +1,82 @@
+/* .Carousel { */
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    /* opacity: 0.8; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+
+    /* width: 600px; */
+    /* height: 380px; */
+    /* margin: auto; */
+
+    /* object-fit: cover; */
+/* } */
+
+/* .carousel-item  {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    object-fit: cover;
+} */
+
+.carousel img {
+    /* position: fixed; */
+    /* position: center; */
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+/* .player-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    aspect-ratio: 100 / (1920 / 1080);
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* .carousel h3 {
+    color: red;
+} */
+
+/* .carousel-control-prev {
+    height: 300px;
+}
+
+.carousel-control-next {
+    height: 300px;
+}
+
+.carousel .carousel-control-prev-icon {
+    visibility: hidden;
+}
+
+.carousel:hover .carousel-control-prev-icon {
+    visibility: visible;
+}
+
+.carousel .carousel-control-next-icon {
+    visibility: hidden;
+}
+
+.carousel:hover .carousel-control-next-icon {
+    visibility: visible;
+} */
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+} */

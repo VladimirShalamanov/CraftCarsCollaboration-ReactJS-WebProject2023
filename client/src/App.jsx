@@ -1,4 +1,6 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.css";
 
 import { AuthProvider } from './contexts/authContext';
 import Path from './utils/paths';
@@ -6,7 +8,6 @@ import Path from './utils/paths';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
-
 
 import Register from './components/register/Register';
 import Login from './components/login/Login';
@@ -18,7 +19,7 @@ export default function App() {
             <div id="child-box">
 
                 <Header />
-
+                
                 <main>
                     <Routes>
                         <Route path={Path.Header} element={<Header />} />

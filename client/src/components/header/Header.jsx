@@ -1,7 +1,9 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+import Path from '../../utils/paths';
 import AuthContext from '../../contexts/authContext';
+import "./header.css";
 
 export default function Header() {
     const {
@@ -11,18 +13,19 @@ export default function Header() {
 
     return (
         <header>
-            <h1><Link className="home" to="/">CCC</Link></h1>
+            <h1><Link className="home" to={Path.Home}>CCC</Link></h1>
+            
             <nav>
                 {isAuthenticated && (
                     <div id="user">
-                        <Link to="/logout">Logout</Link>
+                        <Link to={Path.Logout}>Logout</Link>
                         <span>- {username}</span>
                     </div>
                 )}
                 {!isAuthenticated && (
                     <div id="guest">
-                        <Link to="/login">Login</Link>
-                        <Link to="/register">Register</Link>
+                        <Link to={Path.Login}>Login</Link>
+                        <Link to={Path.Register}>Register</Link>
                     </div>
                 )}
             </nav>
