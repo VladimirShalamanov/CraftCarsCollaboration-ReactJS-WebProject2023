@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Path from '../../utils/paths';
 import AuthContext from '../../contexts/authContext';
+
 import "./header.css";
 
 export default function Header() {

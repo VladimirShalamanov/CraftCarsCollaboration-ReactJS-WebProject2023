@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import Path from "../../utils/paths"; 
 import useForm from "../../hooks/useForm";
 import authContext from "../../contexts/authContext";
+
 import "./login.css";
 
 const LoginFormKeys = {
@@ -19,7 +21,8 @@ export default function Login() {
     });
 
     return (
-        <section id="login-page" className="auth">
+        // <section id="login-page" className="auth">
+        <section className="login-page">
             <form id="login" onSubmit={onSubmit}>
 
                 <div className="container">
@@ -47,7 +50,7 @@ export default function Login() {
 
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
-                        <span>If you don't have profile click <a href={Path.Register}>here</a></span>
+                        <span>If you don't have profile click <Link href={Path.Register}>here</Link></span>
                     </p>
                 </div>
             </form>

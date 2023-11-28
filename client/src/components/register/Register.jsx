@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import Path from "../../utils/paths";
 import useForm from "../../hooks/useForm";
@@ -19,7 +20,8 @@ export default function Register() {
     });
 
     return (
-        <section id="register-page" className="content auth">
+        // <section id="register-page" className="content auth">
+        <section className="register-page">
             <form id="register" onSubmit={onSubmit}>
                 <div className="container">
                     <div className="brand-logo"></div>
@@ -56,7 +58,7 @@ export default function Register() {
                     <input className="btn submit" type="submit" value="Register" />
 
                     <p className="field">
-                        <span>If you already have profile click <a href={Path.Login}>here</a></span>
+                        <span>If you already have profile click <Link href={Path.Login}>here</Link></span>
                     </p>
                 </div>
             </form>
