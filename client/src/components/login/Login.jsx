@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Path from "../../utils/paths"; 
 import useForm from "../../hooks/useForm";
 import authContext from "../../contexts/authContext";
+import "./login.css";
 
 const LoginFormKeys = {
     Email: 'email',
