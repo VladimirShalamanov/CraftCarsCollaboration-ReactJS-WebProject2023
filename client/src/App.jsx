@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import { AuthProvider } from './contexts/authContext';
 import AuthGuard from './components/guards/AuthGuard';
+import GuestGuard from './components/guards/GuestGuard';
 import ErrorBoundary from './components/error-boundary/ErrorBoundary';
 import Path from './utils/paths';
 
@@ -28,8 +29,10 @@ export default function App() {
                             <Route path={Path.Header} element={<Header />} />
                             <Route path={Path.Home} element={<Home />} />
 
-                            <Route path={Path.Login} element={<Login />} />
-                            <Route path={Path.Register} element={<Register />} />
+                            <Route element={<GuestGuard />} >
+                                <Route path={Path.Login} element={<Login />} />
+                                <Route path={Path.Register} element={<Register />} />
+                            </Route>
 
                             <Route element={<AuthGuard />} >
                                 <Route path={Path.Logout} element={<Logout />} />
