@@ -1405,7 +1405,7 @@
                 make: "Ford F150",
                 category: "Off-Road",
                 price: "80 000",
-                imageUrl: "https://www.carpixel.net/w/e6271efa7cb65042f478cd3b156b2451/ford-f-150-raptor-supercab-wallpaper-hd-78111.jpg",
+                imageUrl: "https://images.wallpaperscraft.com/image/single/ford_f150_raptor_99495_1920x1080.jpg",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
                 _id: "a5f74b67-aeae-4335-8cd3-dff4c689815f"
             },
