@@ -2,7 +2,7 @@ const Path = {
     Home: '/',
     Header: '/header',
 
-    // GameList: '/games',
+    CarList: '/cars',
     // GameCreate: '/games/create',
     // GameDetails: '/games/:gameId',
     // GameEdit: '/games/:gameId/edit',

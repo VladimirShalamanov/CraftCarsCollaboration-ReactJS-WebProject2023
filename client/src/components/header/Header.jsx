@@ -37,23 +37,20 @@ export default function Header() {
             <h1><Link className="icon-home" to={Path.Home} onClick={onClickNavClose}>CCC</Link></h1>
 
             <nav className={active}>
+                <Link to={Path.CarList} onClick={onClickNavClose}>Models</Link>
+
                 {isAuthenticated && (
-                    <div id="user">
+                    <div className="user">
                         <Link to={Path.Logout} onClick={onClickNavClose}>Logout</Link>
-                        {/* <span>- {username}</span> */}
+                        <span>- {username}</span>
                     </div>
                 )}
-                {!isAuthenticated && (
-                    <div id="guest">
+                {!isAuthenticated &&
+                    <div className="guest">
                         <Link to={Path.Login} onClick={onClickNavClose}>Login</Link>
                         <Link to={Path.Register} onClick={onClickNavClose}>Register</Link>
                     </div>
-                )}
-
-                <div className='nav_item'><a href="#">tuk</a></div>
-                <div className='nav_item'><a href="#">tuk</a></div>
-                <div className='nav_item'><a href="#">tuk</a></div>
-                <div className='nav_item'><a href="#">tuk</a></div>
+                }
             </nav>
 
             <div onClick={onClickNavToogle} className={toogleIcon}>
