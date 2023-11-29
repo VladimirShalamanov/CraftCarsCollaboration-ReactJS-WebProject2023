@@ -25,11 +25,11 @@
 } */
 
 .carousel img {
-    /* position: fixed; */
+    /* position: absolute; */
     /* position: center; */
     width: 100%;
-    height: 100%;
-    /* object-fit: cover; */
+    height: 100vh;
+    object-fit: cover;
 }
 
 /* .player-wrapper {

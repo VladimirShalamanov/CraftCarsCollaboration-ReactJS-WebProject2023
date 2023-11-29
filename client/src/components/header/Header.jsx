@@ -29,23 +29,22 @@ export default function Header() {
 
     return (
         <header>
-            <h1><Link className="icon-home" to={Path.Home}>CCC</Link></h1>
+            <h1><Link className="icon-home" to={Path.Home} onClick={onClickNavToogle}>CCC</Link></h1>
 
             <nav className={active}>
                 {isAuthenticated && (
                     <div id="user">
-                        <Link to={Path.Logout}>Logout</Link>
-                        <span>- {username}</span>
+                        <Link to={Path.Logout} onClick={onClickNavToogle}>Logout</Link>
+                        {/* <span>- {username}</span> */}
                     </div>
                 )}
                 {!isAuthenticated && (
                     <div id="guest">
-                        <Link to={Path.Login}>Login</Link>
-                        <Link to={Path.Register}>Register</Link>
+                        <Link to={Path.Login} onClick={onClickNavToogle}>Login</Link>
+                        <Link to={Path.Register} onClick={onClickNavToogle}>Register</Link>
                     </div>
                 )}
 
-                {/* <Link to={Path.Register} onClick={onClickNavToogle}>Register</Link> */}
                 <div className='nav_item'><a href="#">tuk</a></div>
                 <div className='nav_item'><a href="#">tuk</a></div>
                 <div className='nav_item'><a href="#">tuk</a></div>
