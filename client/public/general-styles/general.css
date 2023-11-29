@@ -4,3 +4,6 @@
     box-sizing: border-box;
 }
 
+main > :not(.home) {
+    padding-top: 100px;
+}
