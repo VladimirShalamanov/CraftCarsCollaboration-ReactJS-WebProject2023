@@ -1393,24 +1393,38 @@
     		}
     	},
     	games: {
-            "e36b2896-0b2a-48a6-ab14-18ea8be3c9ba": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "Call Of Duty",
-                category: "Shooter FPS",
-                maxLevel: "150",
-                imageUrl: "https://upload.wikimedia.org/wikipedia/ru/5/5f/COD_Warzone.jpg",
-                summary: "Kill everyone who you see",
-                _id: "e36b2896-0b2a-48a6-ab14-18ea8be3c9ba"
+            "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba": {
+                make: "Ford Mustang",
+                category: "Sport",
+                price: "150 000",
+                imageUrl: "https://i.pinimg.com/originals/c0/fa/83/c0fa838a091d36c650c1251343553b7d.jpg",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+                _id: "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba"
             },
-            "a5f74b67-aeae-4335-8cd0-dff4c689815f": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                title: "Forza Horizon 3",
+            "a5f74b67-aeae-4335-8cd3-dff4c689815f": {
+                make: "Ford F150",
+                category: "Off-Road",
+                price: "80 000",
+                imageUrl: "https://www.carpixel.net/w/e6271efa7cb65042f478cd3b156b2451/ford-f-150-raptor-supercab-wallpaper-hd-78111.jpg",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689815f"
+            },
+            "a5f74b67-aeae-4335-8cd3-dff4c689813p": {
+                make: "Chevrolet Camaro",
                 category: "Racing",
-                maxLevel: "900",
-                imageUrl: "https://upload.wikimedia.org/wikipedia/en/5/54/Forza_horizon_3_cover_art.jpg",
-                summary: "Best realistic and simulation game ever!",
-                _id: "a5f74b67-aeae-4335-8cd0-dff4c689815f"
-            }
+                price: "120 000",
+                imageUrl: "https://images7.alphacoders.com/587/thumb-1920-587110.jpg",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689813p"
+            },
+            "a5f74b67-aeae-4335-8cd3-dff4c689888r": {
+                make: "Koenigsegg Jesko",
+                category: "Racing",
+                price: "1 120 000",
+                imageUrl: "https://uhdwallpapers.org/uploads/converted/20/11/04/koenigsegg-jesko-absolut-1920x1080_947548-mm-90.jpg",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689888r"
+            },
         }
     };
     var rules$1 = {
