@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 
 import * as carService from "../../services/carService";
+import CarQuickItem from "./car-quick-item/CarQuickItem";
 import "./carQuickView.css";
 
 export default function CarQuickView() {
@@ -15,11 +16,11 @@ export default function CarQuickView() {
     return (
         <article className="car-quick-view">
             <div className="message">
-                <h3>Action parametar</h3>
+                <h2>Action parametar</h2>
             </div>
 
             <div className="car-quick-list">
-                {/* {quickCar} */}
+                {quickCar.map(car => <CarQuickItem key={car._id} {...car} />)}
 
                 {!quickCar.length && <h4 className="empty-articles">No cars yet!</h4>}
             </div>
