@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Path from '../../utils/paths';
 import AuthContext from '../../contexts/authContext';
+import logo from "../../../public/img/logo-ccc.png";
 
 import "./header.css";
 
@@ -34,7 +35,7 @@ export default function Header() {
 
     return (
         <header>
-            <h1><Link className="icon-home" to={Path.Home} onClick={onClickNavClose}>CCC</Link></h1>
+            <h1><Link className="icon-home" to={Path.Home} onClick={onClickNavClose}><img src={logo} /></Link></h1>
 
             <nav className={active}>
                 <Link to={Path.CarList} onClick={onClickNavClose}>Models</Link>

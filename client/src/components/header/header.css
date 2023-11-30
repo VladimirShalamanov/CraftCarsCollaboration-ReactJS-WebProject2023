@@ -9,6 +9,10 @@ header {
     /* background-size: cover; */
 }
 
+header .icon-home img {
+    width: 40px;
+}
+
 .nav_menu {
     display: flex;
     justify-content: space-evenly;
