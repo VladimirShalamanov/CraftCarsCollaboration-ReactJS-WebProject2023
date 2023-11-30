@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
-main > :not(.home) {
+main> :not(.home) {
     padding-top: 100px;
+}
+
+#root {
+    background-color: whitesmoke;
 }

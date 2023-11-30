@@ -1,14 +1,21 @@
-.car-catalog-page {
+/* .car-catalog-page {
     text-align: center;
-}
+} */
 
 .car-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3em;
-    padding-top: 30px;
+    
+    /* padding-top: 30px; */
+    /* height: 90vh; */
+    /* align-items: center; */
 }
+
+
+
+
 
 .empty-articles{
     padding: 10em 0;
