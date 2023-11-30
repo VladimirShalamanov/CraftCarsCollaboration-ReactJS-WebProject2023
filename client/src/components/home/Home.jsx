@@ -1,4 +1,5 @@
 import CarouselHome from "../carousel-home/CarouselHome";
+import CarQuickView from "../car-quick-view/CarQuickView";
 import "./home.css";
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
             <div className="carousel">
                 <CarouselHome />
             </div>
+
+            <CarQuickView />
         </section>
     );
 };
