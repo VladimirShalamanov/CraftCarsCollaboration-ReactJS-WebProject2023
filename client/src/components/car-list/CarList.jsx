@@ -16,8 +16,10 @@ export default function CarList() {
 
     return (
         <section className="car-catalog-page">
-            <h1>Car Catalog</h1>
-            <h3>Choose Your Future Car</h3>
+            <div className="title">
+                <h1>Car Catalog</h1>
+                <h3>Choose Your Future Car</h3>
+            </div>
 
             <div className="car-list">
                 {cars.map(c => <CarListItem key={c._id} {...c} />)}

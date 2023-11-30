@@ -1,16 +1,28 @@
 .car-item {
     flex-basis: 45%;
     display: flex;
-    box-shadow: 5px 5px 30px black;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.617);
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+}
 
-    /* border-radius: 20px; */
-    /* overflow: hidden; */
+.car-item:hover {
+    box-shadow: 10px 10px 40px rgb(0, 0, 0);
 }
 
 .car-item img {
     width: 550px;
     height: 270px;
-    /* border-radius: 20px; */
+    transition: 0.5s;
+}
+
+.car-item:hover img {
+    border-bottom-right-radius: 150px;
+    transform: scale(1.1);
 }
 
 .car-item .intro {
@@ -21,6 +33,5 @@
     justify-content: center;
     align-items: center;
     /* gap: 1em; */
-    color: black;
-    background-color: white;
+    
 }
