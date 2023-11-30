@@ -1,0 +1,26 @@
+.car-quick-item {
+    width: 350px;
+    height: 500px;
+    background-color: skyblue;
+    border: 4px solid white;
+    border-bottom-left-radius: 100px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.car-quick-item img {
+    width: 350px;
+    transition: 0.5s;
+}
+
+.car-quick-item:hover img {
+    transform: scale(1.1);
+}
+
+.car-quick-item .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
