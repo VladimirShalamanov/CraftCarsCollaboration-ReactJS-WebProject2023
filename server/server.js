@@ -1,10 +1,11 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('http'), require('fs'), require('crypto')) :
-    typeof define === 'function' && define.amd ? define(['http', 'fs', 'crypto'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Server = factory(global.http, global.fs, global.crypto));
-}(this, (function (http, fs, crypto) { 'use strict';
+        typeof define === 'function' && define.amd ? define(['http', 'fs', 'crypto'], factory) :
+            (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Server = factory(global.http, global.fs, global.crypto));
+}(this, (function (http, fs, crypto) {
+    'use strict';
 
-    function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+    function _interopDefaultLegacy(e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
     var http__default = /*#__PURE__*/_interopDefaultLegacy(http);
     var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
@@ -13,14 +14,14 @@
     class ServiceError extends Error {
         constructor(message = 'Service Error') {
             super(message);
-            this.name = 'ServiceError'; 
+            this.name = 'ServiceError';
         }
     }
 
     class NotFoundError extends ServiceError {
         constructor(message = 'Resource not found') {
             super(message);
-            this.name = 'NotFoundError'; 
+            this.name = 'NotFoundError';
             this.status = 404;
         }
     }
@@ -28,7 +29,7 @@
     class RequestError extends ServiceError {
         constructor(message = 'Request error') {
             super(message);
-            this.name = 'RequestError'; 
+            this.name = 'RequestError';
             this.status = 400;
         }
     }
@@ -36,7 +37,7 @@
     class ConflictError extends ServiceError {
         constructor(message = 'Resource conflict') {
             super(message);
-            this.name = 'ConflictError'; 
+            this.name = 'ConflictError';
             this.status = 409;
         }
     }
@@ -44,7 +45,7 @@
     class AuthorizationError extends ServiceError {
         constructor(message = 'Unauthorized') {
             super(message);
-            this.name = 'AuthorizationError'; 
+            this.name = 'AuthorizationError';
             this.status = 401;
         }
     }
@@ -52,7 +53,7 @@
     class CredentialError extends ServiceError {
         constructor(message = 'Forbidden') {
             super(message);
-            this.name = 'CredentialError'; 
+            this.name = 'CredentialError';
             this.status = 403;
         }
     }
@@ -556,8 +557,8 @@
             if (query.pageSize) {
                 responseData = responseData.slice(0, pageSize);
             }
-    		
-    		if (query.distinct) {
+
+            if (query.distinct) {
                 const props = query.distinct.split(',').filter(p => p != '');
                 responseData = Object.values(responseData.reduce((distinct, c) => {
                     const key = props.map(p => c[p]).join('::');
@@ -793,7 +794,7 @@
     }
 
     function onRequest(context, tokens, query, body) {
-        Object.entries(body).forEach(([k,v]) => {
+        Object.entries(body).forEach(([k, v]) => {
             console.log(`${k} ${v ? 'enabled' : 'disabled'}`);
             context.util[k] = v;
         });
@@ -931,7 +932,7 @@
          * @param {Object} data Value to store. Shallow merge will be performed!
          * @return {Object} Updated entry.
          */
-         function merge(collection, id, data) {
+        function merge(collection, id, data) {
             if (!collections.has(collection)) {
                 throw new ReferenceError('Collection does not exist: ' + collection);
             }
@@ -1318,142 +1319,164 @@
 
     var identity = "email";
     var protectedData = {
-    	users: {
-    		"35c62d76-8152-4626-8712-eeb96381bea8": {
-    			email: "peter@abv.bg",
-    			username: "Peter",
-    			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
-    		},
-    		"847ec027-f659-4086-8032-5173e2f9c93a": {
-    			email: "george@abv.bg",
-    			username: "George",
-    			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
-    		},
-    		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
-    			email: "admin@abv.bg",
-    			username: "Admin",
-    			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
-    		}
-    	},
-    	sessions: {
-    	}
+        users: {
+            "35c62d76-8152-4626-8712-eeb96381bea8": {
+                email: "peter@abv.bg",
+                username: "Peter",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+            },
+            "847ec027-f659-4086-8032-5173e2f9c93a": {
+                email: "george@abv.bg",
+                username: "George",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+            },
+            "60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
+                email: "admin@abv.bg",
+                username: "Admin",
+                hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
+            }
+        },
+        sessions: {
+        }
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
-    		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
-    		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
-    	},
-    	cars: {
+        recipes: {
+            "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Easy Lasagna",
+                img: "assets/lasagna.jpg",
+                ingredients: [
+                    "1 tbsp Ingredient 1",
+                    "2 cups Ingredient 2",
+                    "500 g  Ingredient 3",
+                    "25 g Ingredient 4"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551279012
+            },
+            "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Grilled Duck Fillet",
+                img: "assets/roast.jpg",
+                ingredients: [
+                    "500 g  Ingredient 1",
+                    "3 tbsp Ingredient 2",
+                    "2 cups Ingredient 3"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551344360
+            },
+            "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Roast Trout",
+                img: "assets/fish.jpg",
+                ingredients: [
+                    "4 cups Ingredient 1",
+                    "1 tbsp Ingredient 2",
+                    "1 tbsp Ingredient 3",
+                    "750 g  Ingredient 4",
+                    "25 g Ingredient 5"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551388703
+            }
+        },
+        cars: {
             "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba": {
+                _id: "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba",
+                imageUrl: "https://i.pinimg.com/originals/c0/fa/83/c0fa838a091d36c650c1251343553b7d.jpg",
                 make: "Ford Mustang",
                 category: "Sport",
                 price: "150 000",
-                imageUrl: "https://i.pinimg.com/originals/c0/fa/83/c0fa838a091d36c650c1251343553b7d.jpg",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
-                _id: "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba"
             },
             "a5f74b67-aeae-4335-8cd3-dff4c689815f": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689815f",
+                imageUrl: "https://images.wallpaperscraft.com/image/single/ford_f150_raptor_99495_1920x1080.jpg",
                 make: "Ford F150",
                 category: "Off-Road",
                 price: "80 000",
-                imageUrl: "https://images.wallpaperscraft.com/image/single/ford_f150_raptor_99495_1920x1080.jpg",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
-                _id: "a5f74b67-aeae-4335-8cd3-dff4c689815f"
             },
             "a5f74b67-aeae-4335-8cd3-dff4c689813p": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689813p",
+                imageUrl: "https://images7.alphacoders.com/587/thumb-1920-587110.jpg",
                 make: "Chevrolet Camaro",
                 category: "Racing",
                 price: "120 000",
-                imageUrl: "https://images7.alphacoders.com/587/thumb-1920-587110.jpg",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
-                _id: "a5f74b67-aeae-4335-8cd3-dff4c689813p"
             },
             "a5f74b67-aeae-4335-8cd3-dff4c689888r": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689888r",
+                imageUrl: "https://uhdwallpapers.org/uploads/converted/20/11/04/koenigsegg-jesko-absolut-1920x1080_947548-mm-90.jpg",
                 make: "Koenigsegg Jesko",
                 category: "Racing",
                 price: "1 120 000",
-                imageUrl: "https://uhdwallpapers.org/uploads/converted/20/11/04/koenigsegg-jesko-absolut-1920x1080_947548-mm-90.jpg",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
-                _id: "a5f74b67-aeae-4335-8cd3-dff4c689888r"
             },
-        }
+        },
+        posts: {
+            "82c77309-16c9-4616-b3b9-75acac2411d0": {
+                _id: "82c77309-16c9-4616-b3b9-75acac2411d0",
+                _createdOn: 1701339906126,
+                imageUrl: "https://wallpapersmug.com/download/1080x1920/77a3c0/dodge-challenger-srt-hellcat.jpg",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
+            },
+            "01401ff1-206d-4aa6-837d-8b2bf0f46d47": {
+                _id: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1701340116039,
+                imageUrl: "https://i.pinimg.com/originals/f8/e4/b1/f8e4b1928f288f1eb4c5a1f4aca5a403.jpg",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
+            },
+            "0cf66b1c-4ed6-4bf3-94ee-ae4846b6a91b": {
+                _id: "0cf66b1c-4ed6-4bf3-94ee-ae4846b6a91b",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1701340149334,
+                imageUrl: "https://w0.peakpx.com/wallpaper/721/6/HD-wallpaper-ferrari-in-dubai-car-cars-dark-dubai-exotic-ferrari-motors-motorsport-sport-sports-thumbnail.jpg",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
+            },
+        },
     };
     var rules$1 = {
-    	users: {
-    		".create": false,
-    		".read": [
-    			"Owner"
-    		],
-    		".update": false,
-    		".delete": false
-    	},
-    	members: {
-    		".update": "isOwner(user, get('teams', data.teamId))",
-    		".delete": "isOwner(user, get('teams', data.teamId)) || isOwner(user, data)",
-    		"*": {
-    			teamId: {
-    				".update": "newData.teamId = data.teamId"
-    			},
-    			status: {
-    				".create": "newData.status = 'pending'"
-    			}
-    		}
-    	}
+        users: {
+            ".create": false,
+            ".read": [
+                "Owner"
+            ],
+            ".update": false,
+            ".delete": false
+        },
+        members: {
+            ".update": "isOwner(user, get('teams', data.teamId))",
+            ".delete": "isOwner(user, get('teams', data.teamId)) || isOwner(user, data)",
+            "*": {
+                teamId: {
+                    ".update": "newData.teamId = data.teamId"
+                },
+                status: {
+                    ".create": "newData.status = 'pending'"
+                }
+            }
+        }
     };
     var settings = {
-    	identity: identity,
-    	protectedData: protectedData,
-    	seedData: seedData,
-    	rules: rules$1
+        identity: identity,
+        protectedData: protectedData,
+        seedData: seedData,
+        rules: rules$1
     };
 
     const plugins = [
