@@ -9,7 +9,7 @@ main> :not(.home) {
 }
 
 #root {
-    background-image: url('../img/img-bck.jpg');
+    background-image: url('../../src/assets/general-img/img-back.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

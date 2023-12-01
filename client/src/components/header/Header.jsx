@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import Path from '../../utils/paths';
 import AuthContext from '../../contexts/authContext';
-import logo from "../../../public/img/logo-ccc.png";
 
+import logo from "../../assets/general-img/logo-ccc.png";
 import "./header.css";
 
 export default function Header() {
