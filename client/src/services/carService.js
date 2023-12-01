@@ -6,10 +6,10 @@ export const getAll = async () => {
     const result = await request.get(baseUrl);
 
     return result;
-}
+};
 
 export const getOne = async (carId) => {
     const result = await request.get(`${baseUrl}/${carId}`);
 
     return result;
-}
+};

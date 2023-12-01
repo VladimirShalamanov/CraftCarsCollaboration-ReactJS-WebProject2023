@@ -28,4 +28,4 @@ export default function CarList() {
             {!cars.length && <h4 className="empty-articles">No cars yet!</h4>}
         </section>
     );
-}
+};
