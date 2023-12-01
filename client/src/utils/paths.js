@@ -3,9 +3,12 @@ const Path = {
     Header: '/header',
 
     CarList: '/cars',
-    // GameCreate: '/games/create',
-    // GameDetails: '/games/:gameId',
-    // GameEdit: '/games/:gameId/edit',
+    // CarDetails: '/cars/:carId',
+    
+    PostList: '/posts',
+    // PostDetails: '/posts/:postId',
+    // PostCreate: '/posts/create',
+    // PostEdit: '/posts/:gameId/edit',
     
     Register: '/register',
     Login: '/login',

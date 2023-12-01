@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import * as postService from "../../services/postService";
 
-// import CarListItem from "./car-list-item/CarListItem";
+import PostListItem from "./post-list-item/PostListItem";
 import "./postList.css";
 
 export default function PostList() {
@@ -21,9 +21,9 @@ export default function PostList() {
                 <h3>We be proud of you post anything!</h3>
             </div>
 
-            {/* <div className="post-list">
-                {posts.map(c => <CarListItem key={c._id} {...c} />)}
-            </div> */}
+            <div className="post-list">
+                {posts.map(p => <PostListItem key={p._id} {...p} />)}
+            </div>
 
             {!posts.length && <h4 className="empty-articles">No posts yet!</h4>}
         </section>

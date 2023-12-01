@@ -39,6 +39,7 @@ export default function Header() {
 
             <nav className={active}>
                 <Link to={Path.CarList} onClick={onClickNavClose}>Models</Link>
+                <Link to={Path.PostList} onClick={onClickNavClose}>Posts</Link>
 
                 {isAuthenticated && (
                     <div className="user">

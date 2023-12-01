@@ -8,15 +8,16 @@ import GuestGuard from './components/guards/GuestGuard';
 import ErrorBoundary from './components/error-boundary/ErrorBoundary';
 import Path from './utils/paths';
 
+import Register from './components/register/Register';
+import Login from './components/login/Login';
+import Logout from './components/logout/Logout';
+
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 
 import CarList from './components/car-list/CarList';
-
-import Register from './components/register/Register';
-import Login from './components/login/Login';
-import Logout from './components/logout/Logout';
+import PostList from './components/post-list/PostList';
 
 export default function App() {
     return (
@@ -32,6 +33,7 @@ export default function App() {
                             <Route path={Path.Home} element={<Home />} />
 
                             <Route path={Path.CarList} element={<CarList />} />
+                            <Route path={Path.PostList} element={<PostList />} />
 
                             <Route element={<GuestGuard />} >
                                 <Route path={Path.Login} element={<Login />} />
