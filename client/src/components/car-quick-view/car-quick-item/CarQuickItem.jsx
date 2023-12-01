@@ -10,7 +10,7 @@ export default function CarQuickItem({
         <div className="car-quick-item">
             <img src={imageUrl} />
 
-            <div className="info">
+            <div className="intro">
                 <h3>{make}</h3>
                 <h4>{category}</h4>
             </div>
