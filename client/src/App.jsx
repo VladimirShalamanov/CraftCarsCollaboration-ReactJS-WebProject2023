@@ -18,6 +18,7 @@ import Footer from './components/footer/Footer';
 
 import CarList from './components/car-list/CarList';
 import PostList from './components/post-list/PostList';
+import PostDetails from './components/post-details/PostDetails';
 
 export default function App() {
     return (
@@ -33,7 +34,9 @@ export default function App() {
                             <Route path={Path.Home} element={<Home />} />
 
                             <Route path={Path.CarList} element={<CarList />} />
+
                             <Route path={Path.PostList} element={<PostList />} />
+                            <Route path={Path.PostDetails} element={<PostDetails />} />
 
                             <Route element={<GuestGuard />} >
                                 <Route path={Path.Login} element={<Login />} />

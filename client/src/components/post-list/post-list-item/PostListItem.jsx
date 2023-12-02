@@ -15,7 +15,7 @@ export default function PostListItem({
             </div> */}
 
             {/* <Link to={pathToUrl(Path.GameDetails, { gameId: _id })} className="details-button">Details</Link> */}
-            <Link to={Path.PostDetails} className="details">Button</Link>
-        </div>
+            <Link to={`${Path.PostList}/${_id}`} className="details">Button</Link>
+        </div >
     );
 };
