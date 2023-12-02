@@ -14,6 +14,16 @@ export const getOne = async (postId) => {
     return result;
 };
 
+export const getMine = async (userId) => {
+    const query = new URLSearchParams({
+        where: `_ownerId="${userId}"`,
+    });
+
+    const result = await request.get(`${baseUrl}?${query.toString()}`);
+
+    return result;
+};
+
 export const create = async (postData) => {
     const result = await request.post(baseUrl, postData);
 

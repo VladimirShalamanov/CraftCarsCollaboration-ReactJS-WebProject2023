@@ -7,11 +7,11 @@ import "./postList.css";
 
 export default function PostList() {
     const [posts, setPosts] = useState([]);
-
+    
     useEffect(() => {
         postService.getAll()
-            .then(res => setPosts(res))
-            .catch(error => console.log(error));
+        .then(res => setPosts(res))
+        .catch(error => console.log(error));
     }, []);
 
     return (
