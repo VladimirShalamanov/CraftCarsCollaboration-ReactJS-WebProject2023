@@ -11,10 +11,11 @@ export default function PostListItem({
         <div className="post-item">
             <img src={imageUrl} />
 
-            {/* <div className="intro">
+            {/* <div className="intro"> 
             </div> */}
 
             {/* <Link to={pathToUrl(Path.GameDetails, { gameId: _id })} className="details-button">Details</Link> */}
+            <Link to={Path.PostDetails} className="details">Button</Link>
         </div>
     );
 };

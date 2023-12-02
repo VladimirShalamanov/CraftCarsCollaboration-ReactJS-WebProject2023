@@ -6,7 +6,7 @@ const Path = {
     // CarDetails: '/cars/:carId',
     
     PostList: '/posts',
-    // PostDetails: '/posts/:postId',
+    PostDetails: '/posts/:postId',
     // PostCreate: '/posts/create',
     // PostEdit: '/posts/:gameId/edit',
     
