@@ -13,31 +13,40 @@ export default function Header() {
         username,
     } = useContext(AuthContext);
 
-    const [active, setActive] = useState("nav_menu");
+    const [menu, setMenu] = useState("nav_menu");
     const [toogleIcon, setToogleIcon] = useState("nav_toogle");
+    const [backdrop, setBackdrop] = useState("backdrop");
 
     const onClickNavToogle = () => {
         // Animatioin of menu
-        active === 'nav_menu'
-            ? setActive('nav_menu nav_active')
-            : setActive('nav_menu');
+        menu === 'nav_menu'
+            ? setMenu('nav_menu nav_active')
+            : setMenu('nav_menu');
 
         // Animatioin of icon for menu
-        toogleIcon == 'nav_toogle'
+        toogleIcon === 'nav_toogle'
             ? setToogleIcon("nav_toogle toogle")
             : setToogleIcon("nav_toogle");
+
+        // Animatioin of backdrop
+        backdrop === 'backdrop'
+            ? setBackdrop('backdrop backdrop_active')
+            : setBackdrop('backdrop');
     };
 
     const onClickNavClose = () => {
-        setActive('nav_menu');
+        setMenu('nav_menu');
         setToogleIcon("nav_toogle");
-    }
+        setBackdrop('backdrop');
+    };
 
     return (
         <header>
             <h1><Link className="icon-home" to={Path.Home} onClick={onClickNavClose}><img src={logo} /></Link></h1>
 
-            <nav className={active}>
+            <div className={backdrop} onClick={onClickNavClose}></div>
+
+            <nav className={menu}>
                 <Link to={Path.CarList} onClick={onClickNavClose}>Models</Link>
                 <Link to={Path.PostList} onClick={onClickNavClose}>Posts</Link>
 
