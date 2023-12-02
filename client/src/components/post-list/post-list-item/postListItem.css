@@ -1,0 +1,21 @@
+.post-item {
+    flex-basis: 45%;
+    /* display: flex; */
+    /* color: black; */
+    /* background-color: white; */
+    /* border: 3px solid white; */
+    border-radius: 30px;
+    cursor: pointer;
+    /* overflow: hidden; */
+    /* transition: 0.5s; */
+}
+
+
+
+.post-item img {
+    /* width: 480px;
+    height: 854px; */
+    width: 50%;
+    height: 50%;
+    transition: 0.5s;
+}
