@@ -1,20 +1,19 @@
-.car-catalog-page {
+.post-gallery-page {
     min-height: 100vh;
     text-align: center;
 }
 
-.car-catalog-page .title {
+.post-gallery-page .title {
     padding: 30px 0;
 }
 
-.car-catalog-page .empty-articles {
+.post-gallery-page .empty-articles {
     padding-top: 10em;
 }
 
-.car-list {
+.post-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3em;
 }
-
