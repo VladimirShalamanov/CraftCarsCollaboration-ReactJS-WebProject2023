@@ -5,6 +5,7 @@ import * as postService from "../../services/postService";
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
 import Path from "../../utils/paths";
+import { formatDate } from "../../utils/dateFix";
 
 export default function PostDetails() {
     const navigate = useNavigate();
@@ -42,6 +43,7 @@ export default function PostDetails() {
             <div className="info-section">
                 <h1>Username!</h1>
 
+                {formatDate(post._createdOn)}
                 {post._createdOn}
 
                 <p>{post.summary}</p>
