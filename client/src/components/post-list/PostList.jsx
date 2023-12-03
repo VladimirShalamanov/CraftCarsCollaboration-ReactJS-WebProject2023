@@ -7,11 +7,11 @@ import "./postList.css";
 
 export default function PostList() {
     const [posts, setPosts] = useState([]);
-    
+
     useEffect(() => {
         postService.getAll()
-        .then(res => setPosts(res))
-        .catch(error => console.log(error));
+            .then(res => setPosts(res))
+            .catch(error => console.log(error));
     }, []);
 
     return (
@@ -23,9 +23,10 @@ export default function PostList() {
 
             <div className="post-list">
                 {posts.map(p => <PostListItem key={p._id} {...p} />)}
+
+                {!posts.length && <h4 className="empty-articles">No posts yet!</h4>}
             </div>
 
-            {!posts.length && <h4 className="empty-articles">No posts yet!</h4>}
         </section>
     );
 };

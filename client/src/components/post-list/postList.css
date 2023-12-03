@@ -7,13 +7,13 @@
     padding: 30px 0;
 }
 
-.post-gallery-page .empty-articles {
-    padding-top: 10em;
-}
-
 .post-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10em;
+}
+
+.post-list .empty-articles {
+    padding-top: 20vh;
 }
