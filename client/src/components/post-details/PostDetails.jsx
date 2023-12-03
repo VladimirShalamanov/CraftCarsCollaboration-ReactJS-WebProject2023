@@ -3,12 +3,13 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import * as postService from "../../services/postService";
 import * as commentService from "../../services/commentService";
-import { formatDate } from "../../utils/dateFix";
+import { formatDateAndHour, formatDate } from "../../utils/dateFix";
 import { pathToUrl } from "../../utils/pathFix";
 import Path from "../../utils/paths";
 import reducer from "./commentReducer";
 import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/authContext";
+import "./postDetails.css";
 
 export default function PostDetails() {
     const navigate = useNavigate();
@@ -38,7 +39,7 @@ export default function PostDetails() {
             values.comment,
         );
 
-        // Username is correct
+        // Username view is correct
         newComment.owner = { email };
 
         dispatch({
@@ -65,25 +66,30 @@ export default function PostDetails() {
             <img src={post.imageUrl} />
 
             <div className="info-section">
-                <h1>Username!</h1>
-                <h2>Location!</h2>
-
-                {formatDate(post._createdOn)}
-
-                <p>{post.summary}</p>
-
-                {userId === post._ownerId && (
-                    <div className="buttons">
-                        {/* <Link to={pathToUrl(Path.PostEdit, { postId })} className="button">Edit</Link> */}
-                        <button className="button" onClick={onClickDeletePost}>Delete</button>
+                <div className="general-info">
+                    <div className="user-info">
+                        <h5>Username!</h5>
+                        <h6>{post.location}</h6>
+                        <p className="date">{formatDateAndHour(post._createdOn)}</p>
                     </div>
-                )}
+
+                    {userId === post._ownerId && (
+                        <div className="buttons">
+                            {/* <Link to={pathToUrl(Path.PostEdit, { postId })} className="button">Edit</Link> */}
+                            <button className="button" onClick={onClickDeletePost}>Delete</button>
+                            <button className="button" onClick={onClickDeletePost}>Delete</button>
+                        </div>
+                    )}
+                </div>
+
+                <p className="summary">{post.summary}</p>
 
                 <div className="comments-section">
                     <ul>
-                        {comments.map(({ _id, text, owner: { email } }) => (
+                        {comments.map(({ _id, text, _createdOn, owner: { email } }) => (
                             <li key={_id} className="comment">
                                 <p><span>{email}</span> {text}</p>
+                                <p className="date">{formatDate(_createdOn)}</p>
                             </li>
                         ))}
                     </ul>
@@ -91,14 +97,14 @@ export default function PostDetails() {
                     {!comments.length && (
                         <p className="no-comment">No comments.</p>
                     )}
-                </div>
 
-                <article className="create-comment">
-                    <form className="form" onSubmit={onSubmit}>
-                        <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Add comment..."></textarea>
-                        <input className="btn submit" type="submit" value="Add" />
-                    </form>
-                </article>
+                    <article className="create-comment">
+                        <form className="form" onSubmit={onSubmit}>
+                            <input type="text" name="comment" value={values.comment} onChange={onChange} placeholder="Add comment..." />
+                            <input className="btn submit" type="submit" value="Add" />
+                        </form>
+                    </article>
+                </div>
             </div>
 
         </section>
