@@ -1,6 +1,6 @@
 .car-quick-view .message {
     text-align: center;
-    padding: 100px 0 30px 0;
+    padding: 100px 0 50px 0;
 }
 
 .car-quick-view .message h2 {
@@ -14,4 +14,8 @@
     /* flex-wrap: wrap; */
     justify-content: space-evenly;
     gap: 3em;
+}
+
+.car-quick-list .empty-articles {
+    padding: 50px 0;
 }

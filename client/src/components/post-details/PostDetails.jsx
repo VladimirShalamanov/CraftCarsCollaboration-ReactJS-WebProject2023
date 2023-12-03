@@ -1,27 +1,51 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useReducer, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import * as postService from "../../services/postService";
-import AuthContext from "../../contexts/authContext";
-import useForm from "../../hooks/useForm";
-import Path from "../../utils/paths";
+import * as commentService from "../../services/commentService";
 import { formatDate } from "../../utils/dateFix";
+import { pathToUrl } from "../../utils/pathFix";
+import Path from "../../utils/paths";
+import reducer from "./commentReducer";
+import useForm from "../../hooks/useForm";
+import AuthContext from "../../contexts/authContext";
 
 export default function PostDetails() {
     const navigate = useNavigate();
     const { postId } = useParams();
+    // set username from context
     const { userId, email } = useContext(AuthContext);
 
     const [post, setPost] = useState({});
-    // comm
+    const [comments, dispatch] = useReducer(reducer, []);
 
     useEffect(() => {
         postService.getOne(postId)
             .then(setPost);
-        // comm
+
+        commentService.getAll(postId)
+            .then((res) => {
+                dispatch({
+                    type: 'GET_ALL_COMMENTS',
+                    payload: res,
+                });
+            });
     }, [postId]);
 
-    // const handler create
+    const addCommentHandler = async (values) => {
+        const newComment = await commentService.create(
+            postId,
+            values.comment,
+        );
+
+        // Username is correct
+        newComment.owner = { email };
+
+        dispatch({
+            type: 'ADD_COMMENT',
+            payload: newComment,
+        });
+    };
 
     const onClickDeletePost = async () => {
         // use modal
@@ -34,7 +58,7 @@ export default function PostDetails() {
         }
     };
 
-    // const { values, onChange, onSubmit } = useForm(comm , { comment: '', });
+    const { values, onChange, onSubmit } = useForm(addCommentHandler, { comment: '', });
 
     return (
         <section className="post-details">
@@ -42,45 +66,40 @@ export default function PostDetails() {
 
             <div className="info-section">
                 <h1>Username!</h1>
+                <h2>Location!</h2>
 
                 {formatDate(post._createdOn)}
-                {post._createdOn}
 
                 <p>{post.summary}</p>
 
-                <div className="comments-section">
-                    <h2>Comments:</h2>
-                    {/* <ul>
-                        {comments.map(({ _id, text, owner: { email } }) => (
-                            <li key={_id} className="comment">
-                                <p>{email}: {text}</p>
-                            </li>
-                        ))}
-                    </ul> */}
-
-                    {/* {comments.length === 0 && (
-                        <p className="no-comment">No comments.</p>
-                    )} */}
-                    <p className="no-comment">No comments.</p>
-                </div>
-
                 {userId === post._ownerId && (
                     <div className="buttons">
-                        {/* <Link to={pathToUrl(Path.GameEdit, { gameId })} className="button">Edit</Link> */}
-                        {/* <Link to={`${Path.PostEdit}/${postId}`} className="button">Edit</Link> */}
-                        {/* <Link to={pathToUrl(Path.GameDelete, { gameId })} className="button">Delete</Link> */}
+                        {/* <Link to={pathToUrl(Path.PostEdit, { postId })} className="button">Edit</Link> */}
                         <button className="button" onClick={onClickDeletePost}>Delete</button>
                     </div>
                 )}
-            </div>
 
-            <article className="create-comment">
-                <label>Add new comment:</label>
-                {/* <form className="form" onSubmit={onSubmit}>
-                    <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Comment......"></textarea>
-                    <input className="btn submit" type="submit" value="Add Comment" />
-                </form> */}
-            </article>
+                <div className="comments-section">
+                    <ul>
+                        {comments.map(({ _id, text, owner: { email } }) => (
+                            <li key={_id} className="comment">
+                                <p><span>{email}</span> {text}</p>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {!comments.length && (
+                        <p className="no-comment">No comments.</p>
+                    )}
+                </div>
+
+                <article className="create-comment">
+                    <form className="form" onSubmit={onSubmit}>
+                        <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Add comment..."></textarea>
+                        <input className="btn submit" type="submit" value="Add" />
+                    </form>
+                </article>
+            </div>
 
         </section>
     );
