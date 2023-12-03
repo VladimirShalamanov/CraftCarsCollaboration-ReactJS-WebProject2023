@@ -23,9 +23,10 @@ export default function CarList() {
 
             <div className="car-list">
                 {cars.map(c => <CarListItem key={c._id} {...c} />)}
+                
+                {!cars.length && <h4 className="empty-articles">No cars yet!</h4>}
             </div>
 
-            {!cars.length && <h4 className="empty-articles">No cars yet!</h4>}
         </section>
     );
 };
