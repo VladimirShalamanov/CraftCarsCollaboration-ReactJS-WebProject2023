@@ -1432,6 +1432,7 @@
                 _id: "82c77309-16c9-4616-b3b9-75acac2411d0",
                 _createdOn: 1701339906126,
                 imageUrl: "https://wallpapersmug.com/download/1080x1920/77a3c0/dodge-challenger-srt-hellcat.jpg",
+                location: "Nevada",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
             },
             "01401ff1-206d-4aa6-837d-8b2bf0f46d47": {
@@ -1439,6 +1440,7 @@
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 _createdOn: 1701340116039,
                 imageUrl: "https://i.pinimg.com/originals/f8/e4/b1/f8e4b1928f288f1eb4c5a1f4aca5a403.jpg",
+                location: "Abu Dhabi",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
             },
             "0cf66b1c-4ed6-4bf3-94ee-ae4846b6a91b": {
@@ -1446,7 +1448,45 @@
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 _createdOn: 1701340149334,
                 imageUrl: "https://w0.peakpx.com/wallpaper/721/6/HD-wallpaper-ferrari-in-dubai-car-cars-dark-dubai-exotic-ferrari-motors-motorsport-sport-sports-thumbnail.jpg",
+                location: "Paris, France",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
+            },
+        },
+        comments: {
+            "d0c52a99-e751-429c-bc18-2c8a757e7ebc": {
+                _id: "d0c52a99-e751-429c-bc18-2c8a757e7ebc",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1701619815852,
+                postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                text: "My car is the best!",
+            },
+            "16d76b94-a61f-4599-aaa7-f91557bba198": {
+                _id: "16d76b94-a61f-4599-aaa7-f91557bba198",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1701619828636,
+                postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est itaque dignissimos voluptate officia delectus, voluptates inventore pariatur voluptatibus animi libero asperiores, exercitationem, reiciendis soluta recusandae consequuntur quae sit sunt totam!",
+            },
+            "ef5c5f2f-21c9-4aff-acfa-1eb19ccd73db": {
+                _id: "ef5c5f2f-21c9-4aff-acfa-1eb19ccd73db",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1701619829775,
+                postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est itaque dignissimos voluptate officia delectus, voluptates inventore pariatur voluptatibus animi libero asperiores, exercitationem, reiciendis soluta recusandae consequuntur quae sit sunt totam!",
+            },
+            "b8f15d3a-0cfe-45cc-8042-3441e79e2c5d": {
+                _id: "b8f15d3a-0cfe-45cc-8042-3441e79e2c5d",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1701619830694,
+                postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                text: "Woow!"
+            },
+            "b8f15d3a-0cfe-45cc-8042-3441e79e2123": {
+                _id: "b8f15d3a-0cfe-45cc-8042-3441e79e2123",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                _createdOn: 1701619831694,
+                postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                text: "Niceee rims!"
             },
         },
     };
