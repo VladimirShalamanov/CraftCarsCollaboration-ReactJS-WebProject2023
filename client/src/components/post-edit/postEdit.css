@@ -1,36 +1,51 @@
-.edit-page {
+/* css for create and edit page */
+
+.edit-page,
+.create-page {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.edit-page .container {
+.edit-page .container,
+.create-page .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1em;
     text-align: center;
+    gap: 1em;
     width: 400px;
     height: 500px;
     border-radius: 50px;
     background-color: rgb(14, 136, 164);
 }
 
-.edit-page label {
+.edit-page .container form,
+.create-page .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.edit-page label,
+.create-page label {
     font-weight: bold;
 }
 
-.edit-page input {
+.edit-page input,
+.create-page input {
     border-radius: 10px;
 }
 
-.edit-page textarea[id="summary"] {
+.edit-page textarea[id="summary"],
+.create-page textarea[id="summary"] {
     resize: none;
     height: 80px;
     border-radius: 10px;
 }
 
-.edit-page input[type="submit"] {
+.edit-page input[type="submit"],
+.create-page input[type="submit"] {
     align-self: center;
     padding: 5px 15px;
     border: none;
@@ -38,12 +53,14 @@
     background-color: orange;
 }
 
-.edit-page input[type="submit"]:hover {
+.edit-page input[type="submit"]:hover,
+.create-page input[type="submit"]:hover {
     background-color: coral;
 
 }
 
-.edit-page .back-button {
+.edit-page .back-button,
+.create-page .back-button {
     align-self: center;
     padding: 5px 10px;
     border: none;
@@ -51,6 +68,7 @@
     background-color: aqua;
 }
 
-.edit-page .back-button:hover {
+.edit-page .back-button:hover,
+.create-page .back-button:hover {
     background-color: aquamarine;
 }

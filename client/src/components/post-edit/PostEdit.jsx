@@ -35,7 +35,7 @@ export default function PostEdit() {
 
             navigate(Path.Home);
         }
-    }
+    };
 
     const onChange = (e) => {
         setPost(state => ({
@@ -46,9 +46,8 @@ export default function PostEdit() {
 
     return (
         <section className="edit-page">
-            <form id="edit" onSubmit={onSubmitEditPost}>
-                <div className="container">
-
+            <div className="container">
+                <form id="edit" onSubmit={onSubmitEditPost}>
                     <h1>Edit Post</h1>
 
                     <label htmlFor="post-image">Image</label>
@@ -61,9 +60,10 @@ export default function PostEdit() {
                     <textarea id="summary" name="summary" value={post.summary} onChange={onChange} placeholder="Write something..." ></textarea>
 
                     <input className="btn submit" type="submit" value="Edit post" />
-                    <button className="back-button" onClick={() => navigate(-1)}>Back</button>
-                </div>
-            </form>
+                </form>
+
+                <button className="back-button" onClick={() => navigate(-1)}>Back</button>
+            </div>
         </section>
     );
 };

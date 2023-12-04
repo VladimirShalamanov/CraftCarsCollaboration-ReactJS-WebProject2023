@@ -8,7 +8,7 @@ const Path = {
     
     PostList: '/posts',
     PostDetails: '/posts/:postId',
-    // PostCreate: '/posts/create',
+    PostCreate: '/posts/create',
     PostEdit: '/posts/:postId/edit',
     
     Register: '/register',
