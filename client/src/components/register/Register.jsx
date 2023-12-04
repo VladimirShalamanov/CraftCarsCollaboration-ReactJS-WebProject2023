@@ -58,7 +58,7 @@ export default function Register() {
                     <input className="btn submit" type="submit" value="Register" />
 
                     <p className="field">
-                        <span>If you already have profile click <Link href={Path.Login}>here</Link></span>
+                        <span>If you already have profile click <Link to={Path.Login}>here</Link></span>
                     </p>
                 </div>
             </form>

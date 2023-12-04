@@ -50,7 +50,7 @@ export default function Login() {
 
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
-                        <span>If you don't have profile click <Link href={Path.Register}>here</Link></span>
+                        <span>If you don't have profile click <Link to={Path.Register}>here</Link></span>
                     </p>
                 </div>
             </form>
