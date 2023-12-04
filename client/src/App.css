@@ -9,8 +9,8 @@ main> :not(.home) {
     min-height: 100vh;
 }
 
-#root {
-    background-image: url('../../src/assets/general-img/img-back.jpg');
+#child-box {
+    background-image: url('../src/assets//general-img/img-back.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

@@ -23,6 +23,8 @@ import PostDetails from './components/post-details/PostDetails';
 import PostCreate from './components/post-create/PostCreate';
 import PostEdit from './components/post-edit/PostEdit';
 
+import "./App.css";
+
 export default function App() {
     return (
         <ErrorBoundary>
