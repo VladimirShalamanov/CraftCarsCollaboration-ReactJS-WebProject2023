@@ -15,7 +15,7 @@ export default function PostDetails() {
     const navigate = useNavigate();
     const { postId } = useParams();
     // set username from context
-    const { userId, email } = useContext(AuthContext);
+    const { userId, email, isAuthenticated } = useContext(AuthContext);
 
     const [post, setPost] = useState({});
     const [comments, dispatch] = useReducer(reducer, []);
@@ -34,6 +34,10 @@ export default function PostDetails() {
     }, [postId]);
 
     const addCommentHandler = async (values) => {
+        if (values.comment === '') {
+            return alert('Please write!');
+        }
+
         const newComment = await commentService.create(
             postId,
             values.comment,
@@ -46,6 +50,8 @@ export default function PostDetails() {
             type: 'ADD_COMMENT',
             payload: newComment,
         });
+
+        values.comment = '';
     };
 
     const onClickDeletePost = async () => {
@@ -98,10 +104,25 @@ export default function PostDetails() {
                         <p className="no-comment">No comments.</p>
                     )}
 
-                    <article className="create-comment">
-                        <form className="form" onSubmit={onSubmit}>
-                            <input type="text" name="comment" value={values.comment} onChange={onChange} placeholder="Add comment..." />
-                            <input className="btn submit" type="submit" value="Add" />
+                    <article className="create-reacted">
+                        <form className="form-comment" onSubmit={onSubmit}>
+                            <textarea
+                                name="comment"
+                                value={values.comment}
+                                onChange={onChange}
+                                placeholder={isAuthenticated
+                                    ? "Add comment..."
+                                    : "You must be a registered user to react to a post!"}
+                                disabled={isAuthenticated
+                                    ? false
+                                    : true}
+                            ></textarea>
+                            <input
+                                className="btn submit"
+                                type="submit"
+                                value="Add"
+                                // disabled={true}
+                            />
                         </form>
                     </article>
                 </div>
