@@ -82,9 +82,9 @@ export default function PostDetails() {
                     </div>
 
                     {userId === post._ownerId && (
-                        <div className="buttons">
-                            <Link to={pathToUrl(Path.PostEdit, { postId })} className="button">Edit</Link>
-                            <button className="button" onClick={onClickDeletePost}>Delete</button>
+                        <div className="auth-buttons">
+                            <Link to={pathToUrl(Path.PostEdit, { postId })} className="edit-button">Edit</Link>
+                            <button className="delete-button" onClick={onClickDeletePost}>Delete</button>
                         </div>
                     )}
                 </div>
