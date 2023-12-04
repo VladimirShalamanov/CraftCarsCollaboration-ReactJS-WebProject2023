@@ -51,16 +51,17 @@ export default function PostEdit() {
 
                     <h1>Edit Post</h1>
 
-                    <label htmlFor="post-image">Image:</label>
+                    <label htmlFor="post-image">Image</label>
                     <input type="text" id="imageUrl" name="imageUrl" value={post.imageUrl} onChange={onChange} placeholder="Upload your image..." />
 
-                    <label htmlFor="post-location">Location:</label>
+                    <label htmlFor="post-location">Location</label>
                     <input type="text" id="location" name="location" value={post.location} onChange={onChange} placeholder="Bulgaria..." />
 
-                    <label htmlFor="post-summary">Summary:</label>
+                    <label htmlFor="post-summary">Summary</label>
                     <textarea id="summary" name="summary" value={post.summary} onChange={onChange} placeholder="Write something..." ></textarea>
 
                     <input className="btn submit" type="submit" value="Edit post" />
+                    <button className="back-button" onClick={() => navigate(-1)}>Back</button>
                 </div>
             </form>
         </section>

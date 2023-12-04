@@ -1,0 +1,56 @@
+.edit-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-page .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 50px;
+    background-color: rgb(14, 136, 164);
+}
+
+.edit-page label {
+    font-weight: bold;
+}
+
+.edit-page input {
+    border-radius: 10px;
+}
+
+.edit-page textarea[id="summary"] {
+    resize: none;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.edit-page input[type="submit"] {
+    align-self: center;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+.edit-page input[type="submit"]:hover {
+    background-color: coral;
+
+}
+
+.edit-page .back-button {
+    align-self: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+.edit-page .back-button:hover {
+    background-color: aquamarine;
+}
