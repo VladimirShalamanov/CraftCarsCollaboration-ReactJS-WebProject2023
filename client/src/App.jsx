@@ -19,6 +19,7 @@ import Footer from './components/footer/Footer';
 import CarList from './components/car-list/CarList';
 import PostList from './components/post-list/PostList';
 import PostDetails from './components/post-details/PostDetails';
+import PostEdit from './components/post-edit/PostEdit';
 
 export default function App() {
     return (
@@ -38,13 +39,15 @@ export default function App() {
                             <Route path={Path.PostList} element={<PostList />} />
                             <Route path={Path.PostDetails} element={<PostDetails />} />
 
+                            <Route element={<AuthGuard />} >
+                                <Route path={Path.PostEdit} element={<PostEdit />} />
+                                
+                                <Route path={Path.Logout} element={<Logout />} />
+                            </Route>
+
                             <Route element={<GuestGuard />} >
                                 <Route path={Path.Login} element={<Login />} />
                                 <Route path={Path.Register} element={<Register />} />
-                            </Route>
-
-                            <Route element={<AuthGuard />} >
-                                <Route path={Path.Logout} element={<Logout />} />
                             </Route>
                         </Routes>
                     </main>
