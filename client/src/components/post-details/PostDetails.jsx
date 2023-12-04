@@ -1,5 +1,5 @@
 import { useContext, useEffect, useReducer, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import * as postService from "../../services/postService";
 import * as commentService from "../../services/commentService";
@@ -76,13 +76,14 @@ export default function PostDetails() {
                     <div className="user-info">
                         <h5>Username!</h5>
                         <h6>{post.location}</h6>
-                        <p className="date">{formatDateAndHour(post._createdOn)}</p>
+                        <p className="date">{post._updatedOn
+                            ? 'edited on ' + formatDateAndHour(post._updatedOn)
+                            : formatDateAndHour(post._createdOn)}</p>
                     </div>
 
                     {userId === post._ownerId && (
                         <div className="buttons">
-                            {/* <Link to={pathToUrl(Path.PostEdit, { postId })} className="button">Edit</Link> */}
-                            <button className="button" onClick={onClickDeletePost}>Delete</button>
+                            <Link to={pathToUrl(Path.PostEdit, { postId })} className="button">Edit</Link>
                             <button className="button" onClick={onClickDeletePost}>Delete</button>
                         </div>
                     )}
@@ -100,9 +101,7 @@ export default function PostDetails() {
                         ))}
                     </ul>
 
-                    {!comments.length && (
-                        <p className="no-comment">No comments.</p>
-                    )}
+                    {!comments.length && <p className="no-comment">No comments.</p>}
 
                     <article className="create-reacted">
                         <form className="form-comment" onSubmit={onSubmit}>
@@ -121,7 +120,9 @@ export default function PostDetails() {
                                 className="btn submit"
                                 type="submit"
                                 value="Add"
-                                // disabled={true}
+                                disabled={isAuthenticated
+                                    ? false
+                                    : true}
                             />
                         </form>
                     </article>

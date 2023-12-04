@@ -67,14 +67,31 @@
     font-weight: bold;
 }
 
-.comments-section .create-comment {
+.comments-section .create-reacted {
     margin-top: auto;
 }
 
-/* .post-details input[type="text"] {
-    width: 300px;
+.form-comment {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.post-details textarea[name="comment"] {
+    width: 450px;
+    height: 35px;
     resize: none;
-    height: 2em;
-    max-height: 4em;
-    overflow: visible scroll;
-} */
+    overflow-y: scroll;
+    /* overflow: hidden; */
+}
+
+.post-details input[type="submit"] {
+    color: white;
+    background-color: magenta;
+    border-radius: 10px;
+}
+
+.post-details input[type="submit"]:hover {
+    color: magenta;
+    background-color: wheat;
+}
