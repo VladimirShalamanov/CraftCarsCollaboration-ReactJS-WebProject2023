@@ -61,7 +61,7 @@ export default function PostDetails() {
         if (hasConfirm) {
             await postService.remove(postId);
 
-            navigate(Path.PostList);
+            navigate(-1);
         }
     };
 

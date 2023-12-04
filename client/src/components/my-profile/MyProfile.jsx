@@ -1,8 +1,11 @@
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import * as postService from "../../services/postService";
 import AuthContext from "../../contexts/authContext";
+import Path from "../../utils/paths";
 import PostListItem from "../post-list/post-list-item/PostListItem";
+import PostCreate from "../post-create/PostCreate";
 import "./myProfile.css";
 
 export default function MyProfile() {
@@ -18,9 +21,13 @@ export default function MyProfile() {
     return (
         <section className="my-profile">
             <article className="profile-info">
-                <h4>{email}</h4>
+                <div className="profile-data">
+                    <h4>{email}</h4>
+                </div>
 
-                
+                <div className="owner-buttons">
+                    <Link to={Path.PostCreate} className="button-create-post">Create New Post</Link>
+                </div>
             </article>
 
             <div className="post-list">
