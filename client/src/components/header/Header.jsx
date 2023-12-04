@@ -52,6 +52,7 @@ export default function Header() {
 
                 {isAuthenticated && (
                     <div className="user">
+                        <Link to={Path.MyProfile} onClick={onClickNavClose}>My Profile</Link>
                         <Link to={Path.Logout} onClick={onClickNavClose}>Logout</Link>
                         <span>- {username}</span>
                     </div>

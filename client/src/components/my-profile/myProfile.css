@@ -1,0 +1,15 @@
+.my-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.my-profile .profile-info {
+    align-self: center;
+    text-align: center;
+    width: 700px;
+    height: 400px;
+border-radius: 30px;
+    background-color: skyblue;
+
+}

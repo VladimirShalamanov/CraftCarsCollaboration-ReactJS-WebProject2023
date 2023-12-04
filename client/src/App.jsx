@@ -8,6 +8,7 @@ import GuestGuard from './components/guards/GuestGuard';
 import ErrorBoundary from './components/error-boundary/ErrorBoundary';
 import Path from './utils/paths';
 
+import MyProfile from './components/my-profile/MyProfile';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
 import Logout from './components/logout/Logout';
@@ -40,9 +41,10 @@ export default function App() {
                             <Route path={Path.PostDetails} element={<PostDetails />} />
 
                             <Route element={<AuthGuard />} >
-                                <Route path={Path.PostEdit} element={<PostEdit />} />
-                                
+                                <Route path={Path.MyProfile} element={<MyProfile />} />
                                 <Route path={Path.Logout} element={<Logout />} />
+                                
+                                <Route path={Path.PostEdit} element={<PostEdit />} />
                             </Route>
 
                             <Route element={<GuestGuard />} >
