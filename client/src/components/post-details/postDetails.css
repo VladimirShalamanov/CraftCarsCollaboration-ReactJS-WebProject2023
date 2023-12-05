@@ -84,6 +84,11 @@
     line-height: 22px;
 }
 
+.comments-section ul .no-comment {
+    text-align: center;
+    margin-top: 200px;
+}
+
 .comments-section span {
     font-weight: bold;
 }

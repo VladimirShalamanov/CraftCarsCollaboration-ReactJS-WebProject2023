@@ -11,6 +11,8 @@ export default function PostCreate() {
 
         const newPost = Object.fromEntries(new FormData(e.currentTarget));
 
+        return console.log(newPost.location);
+
         try {
             await postService.create(newPost);
 

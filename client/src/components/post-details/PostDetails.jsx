@@ -99,9 +99,10 @@ export default function PostDetails() {
                                 <p className="date">{formatDate(_createdOn)}</p>
                             </li>
                         ))}
+
+                        {!comments.length && <li className="no-comment">No comments.</li>}
                     </ul>
 
-                    {!comments.length && <p className="no-comment">No comments.</p>}
 
                     <article className="create-reacted">
                         <form className="form-comment" onSubmit={onSubmit}>
