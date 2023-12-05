@@ -5,7 +5,6 @@ import * as postService from "../../services/postService";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../utils/paths";
 import PostListItem from "../post-list/post-list-item/PostListItem";
-import PostCreate from "../post-create/PostCreate";
 import "./myProfile.css";
 
 export default function MyProfile() {
