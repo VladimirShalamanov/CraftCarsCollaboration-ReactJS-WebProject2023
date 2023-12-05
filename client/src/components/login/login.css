@@ -1,22 +1,38 @@
+.login-page .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 400px;
+    height: 500px;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(26, 23, 23, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.login-page h1 {
+    align-self: center;
+}
+
+.login-page form {
+    width: 95%;
+    margin: 0 auto;
+}
+
 .login-page .error {
-    color: #fc8181;
+    color: #ee6161;
     font-size: 0.75rem;
     text-align: left;
     margin-top: 0.25rem;
 }
 
-.login-page .checkbox {
+/* .register-page .checkbox {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-top: 1rem;
-}
-
-.login-page form {
-    width: 95%;
-    max-width: 400px;
-    margin: 0 auto;
-}
+} */
 
 .login-page form label {
     font-size: 1rem;
@@ -32,8 +48,8 @@
     padding: 0.65rem 0.5rem;
     font-size: 1rem;
     color: white;
-    border: 2px solid #4a5568;
     background-color: #2d3748;
+    border: 2px solid #4a5568;
     border-radius: 10px;
     outline: none;
 }
@@ -45,24 +61,24 @@
 
 .login-page input::placeholder,
 .login-page select::placeholder {
-    color: #a0aec0;
+    color: #888a8c;
 }
 
-.login-page input[type="checkbox"] {
+/* .register-page input[type="checkbox"] {
     width: fit-content;
     margin-right: 0.5rem;
     transform: scale(1.25);
-}
+} */
 
 .login-page button {
     display: block;
-    margin: 1rem 0;
-    padding: 0.35rem 0.5rem;
+    margin: 1rem auto;
+    padding: 0.3rem 0.5rem;
+    color: black;
     background-color: #4299e1;
-    color: #1a202c;
     border: none;
-    border-radius: 3px;
-    width: 100%;
+    border-radius: 5px;
+    width: 50%;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -70,9 +86,18 @@
 
 .login-page input.input-error,
 .login-page select.input-error {
-    border-color: #fc8181;
+    border-color: #ee6161;
 }
 
 .login-page button:disabled {
-    opacity: 0.35;
+    opacity: 0.20;
+}
+
+.login-page .field {
+    align-self: center;
+    color: white;
+}
+
+.login-page .field a {
+    color: #4299e1;
 }
