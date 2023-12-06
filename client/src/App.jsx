@@ -14,6 +14,7 @@ import Login from './components/login/Login';
 import Logout from './components/logout/Logout';
 
 import Header from './components/header/Header';
+import AboutUs from './components/about-us/AboutUs';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 
@@ -36,6 +37,7 @@ export default function App() {
                     <main>
                         <Routes>
                             <Route path={Path.Header} element={<Header />} />
+                            <Route path={Path.AboutUs} element={<AboutUs />} />
                             <Route path={Path.Home} element={<Home />} />
 
                             <Route path={Path.CarList} element={<CarList />} />
@@ -46,7 +48,7 @@ export default function App() {
                             <Route element={<AuthGuard />} >
                                 <Route path={Path.MyProfile} element={<MyProfile />} />
                                 <Route path={Path.Logout} element={<Logout />} />
-                                
+
                                 <Route path={Path.PostCreate} element={<PostCreate />} />
                                 <Route path={Path.PostEdit} element={<PostEdit />} />
                             </Route>
