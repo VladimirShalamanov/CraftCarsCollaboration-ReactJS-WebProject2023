@@ -8,15 +8,16 @@ export const login = async (email, password) => {
         email,
         password,
     });
-    
+
     return result;
 };
 
-export const register = (email, password) => request.post(`${baseUrl}${Path.Register}`, {
+export const register = (email, password, username) => request.post(`${baseUrl}${Path.Register}`, {
     email,
     password,
-    // email and pass is minimum for the server
-    // you can add more - username, ...
+    username,
 });
+// email and pass is minimum for the server
+// you can add more - username, ...
 
 export const logout = () => request.get(`${baseUrl}${Path.Logout}`);

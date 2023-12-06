@@ -24,20 +24,17 @@ export const AuthProvider = ({
     };
 
     const registerSubmitHandler = async (values) => {
-        if (values.password !== values['confirm-password']) {
-            alert('Passwords do not match!');
+        const result = await authService.register(
+            values.email,
+            values.password,
+            values.username,
+        );
 
-            navigate(Path.Register);
-        } else {
+        setAuth(result);
 
-            const result = await authService.register(values.email, values.password);
+        localStorage.setItem('accessToken', result.accessToken);
 
-            setAuth(result);
-
-            localStorage.setItem('accessToken', result.accessToken);
-
-            navigate(Path.Home);
-        }
+        navigate(Path.Home);
     };
 
     const logoutHandler = async () => {
@@ -50,9 +47,11 @@ export const AuthProvider = ({
         registerSubmitHandler,
         loginSubmitHandler,
         logoutHandler,
-        username: auth.username || auth.email,
+        // username: auth.username || auth.email,
+        username: auth.username,
         email: auth.email,
         userId: auth._id,
+        createdProfile: auth._createdOn,
         isAuthenticated: !!auth.accessToken,
     };
 
