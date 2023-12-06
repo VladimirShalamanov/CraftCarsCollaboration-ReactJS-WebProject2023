@@ -12,10 +12,10 @@ export const login = async (email, password) => {
     return result;
 };
 
-export const register = (email, password, username) => request.post(`${baseUrl}${Path.Register}`, {
+export const register = (email, username, password) => request.post(`${baseUrl}${Path.Register}`, {
     email,
-    password,
     username,
+    password,
 });
 // email and pass is minimum for the server
 // you can add more - username, ...

@@ -19,7 +19,7 @@ export default function Login() {
     const { loginSubmitHandler } = useContext(authContext);
 
     const onSubmit = async (values, actions) => {
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
         loginSubmitHandler(values);
 

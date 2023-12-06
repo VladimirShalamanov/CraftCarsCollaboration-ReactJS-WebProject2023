@@ -1,15 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { formatDate } from "../../utils/dateFix";
 import * as postService from "../../services/postService";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../utils/paths";
 import PostListItem from "../post-list/post-list-item/PostListItem";
+
 import "./myProfile.css";
 
 export default function MyProfile() {
     const [posts, setPosts] = useState([]);
-    const { userId, email } = useContext(AuthContext);
+    const { userId, email, username, createdProfile } = useContext(AuthContext);
 
     useEffect(() => {
         postService.getMine(userId)
@@ -22,6 +24,9 @@ export default function MyProfile() {
             <article className="profile-info">
                 <div className="profile-data">
                     <h4>{email}</h4>
+                    <h4>{username}</h4>
+                    <h5>{formatDate(createdProfile)}</h5>
+                    <p>posts: {posts.length}</p>
                 </div>
 
                 <div className="owner-buttons">
