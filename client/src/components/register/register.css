@@ -1,49 +1,55 @@
-.login-page .container {
+.login-page .container,
+.register-page .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1em;
     width: 400px;
-    height: 500px;
     color: white;
     border-radius: 20px;
     background-color: rgba(26, 23, 23, 0.5);
     backdrop-filter: blur(10px);
 }
 
-.login-page h1 {
+.login-page .container {
+    height: 500px;
+}
+
+.register-page .container {
+    height: 700px;
+}
+
+.login-page h1,
+.register-page h1 {
     align-self: center;
 }
 
-.login-page form {
+.login-page form,
+.register-page form {
     width: 95%;
     margin: 0 auto;
 }
 
-.login-page .error {
+.login-page .error,
+.register-page .error {
     color: #ee6161;
     font-size: 0.75rem;
     text-align: left;
-    margin-top: 0.25rem;
+    margin-top: 0.20rem;
 }
 
-/* .register-page .checkbox {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 1rem;
-} */
-
-.login-page form label {
+.login-page form label,
+.register-page form label {
     font-size: 1rem;
     font-weight: bold;
     display: block;
     text-align: left;
-    margin: 1rem 0 0.2rem;
+    margin: 0.5rem 0;
 }
 
 .login-page input,
-.login-page select {
+.login-page select,
+.register-page input,
+.register-page select {
     width: 100%;
     padding: 0.65rem 0.5rem;
     font-size: 1rem;
@@ -55,22 +61,34 @@
 }
 
 .login-page input:focus,
-.login-page select:focus {
+.login-page select:focus,
+.register-page input:focus,
+.register-page select:focus {
     border-color: #4299e1;
 }
 
 .login-page input::placeholder,
-.login-page select::placeholder {
+.login-page select::placeholder,
+.register-page input::placeholder,
+.register-page select::placeholder {
     color: #888a8c;
 }
 
-/* .register-page input[type="checkbox"] {
-    width: fit-content;
-    margin-right: 0.5rem;
-    transform: scale(1.25);
-} */
+.register-page .checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+}
 
-.login-page button {
+.register-page input[type="checkbox"] {
+    width: fit-content;
+    margin-right: 1rem;
+    transform: scale(1.25);
+}
+
+.login-page button,
+.register-page button {
     display: block;
     margin: 1rem auto;
     padding: 0.3rem 0.5rem;
@@ -85,19 +103,25 @@
 }
 
 .login-page input.input-error,
-.login-page select.input-error {
+.login-page select.input-error,
+.register-page input.input-error,
+.register-page select.input-error {
     border-color: #ee6161;
 }
 
-.login-page button:disabled {
+.login-page button:disabled,
+.register-page button:disabled {
     opacity: 0.20;
 }
 
-.login-page .field {
+.login-page .field,
+.register-page .field {
     align-self: center;
     color: white;
+    font-size: 0.8rem;
 }
 
-.login-page .field a {
+.login-page .field a,
+.register-page .field a {
     color: #4299e1;
 }

@@ -5,10 +5,10 @@ import { Formik, Form } from 'formik';
 import { loginSchema } from "../../lib/yupValidator";
 import CustomInput from "../_custom-inputs/CustomInput";
 import authContext from "../../contexts/authContext";
-import useForm from "../../hooks/useForm";
 import Path from "../../utils/paths";
+// import useForm from "../../hooks/useForm";
 
-import "./login.css";
+import "../register/register.css";
 
 const LoFoKeys = {
     Email: 'email',
@@ -40,22 +40,21 @@ export default function Login() {
                         <Form>
                             <CustomInput
                                 label="Email"
-                                id="login-email"
+                                id={LoFoKeys.Email}
                                 type={LoFoKeys.Email}
                                 name={LoFoKeys.Email}
                                 placeholder="Enter your email"
                             />
                             <CustomInput
                                 label="Password"
-                                id="login-password"
+                                id={LoFoKeys.Password}
                                 type={LoFoKeys.Password}
                                 name={LoFoKeys.Password}
+                                autoComplete="off"
                                 placeholder="Enter your password"
                             />
 
-                            <button disabled={isSubmitting} type="submit">
-                                Login
-                            </button>
+                            <button disabled={isSubmitting} type="submit">Login</button>
                         </Form>
                     )}
                 </Formik>
@@ -75,21 +74,21 @@ export default function Login() {
 
 //                 <label htmlFor="email">Email:</label>
 //                 <input
+//                     id="login-email"
 //                     type="email"
-//                     id="email"
-//                     name={LoginFormKeys.Email}
+//                     name={LoFoKeys.Email}
 //                     placeholder="ivan@gmail.com"
 //                     onChange={onChange}
-//                     value={values[LoginFormKeys.Email]}
+//                     value={values[LoFoKeys.Email]}
 //                 />
 
 //                 <label htmlFor="login-pass">Password:</label>
 //                 <input
-//                     type="password"
 //                     id="login-password"
-//                     name={LoginFormKeys.Password}
+//                     type="password"
+//                     name={LoFoKeys.Password}
 //                     onChange={onChange}
-//                     value={values[LoginFormKeys.Password]}
+//                     value={values[LoFoKeys.Password]}
 //                 />
 
 //                 <input type="submit" className="btn submit" value="Login" />
