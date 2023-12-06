@@ -1,0 +1,29 @@
+.about-us-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 800px;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 72, 255);
+    background-color: rgba(0, 66, 197, 0.233);
+    backdrop-filter: blur(30px);
+}
+
+.about-us-page .about-us-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 200px;
+}
+
+.about-us-page h1 {
+    font-weight: bold;
+    color: white;
+}
+
+.about-us-page svg {
+    padding-right: 1rem;
+    color: rgb(240, 8, 82);
+}
