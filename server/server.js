@@ -1349,90 +1349,86 @@
         }
     };
     var seedData = {
-        recipes: {
-            "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                name: "Easy Lasagna",
-                img: "assets/lasagna.jpg",
-                ingredients: [
-                    "1 tbsp Ingredient 1",
-                    "2 cups Ingredient 2",
-                    "500 g  Ingredient 3",
-                    "25 g Ingredient 4"
-                ],
-                steps: [
-                    "Prepare ingredients",
-                    "Mix ingredients",
-                    "Cook until done"
-                ],
-                _createdOn: 1613551279012
-            },
-            "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                name: "Grilled Duck Fillet",
-                img: "assets/roast.jpg",
-                ingredients: [
-                    "500 g  Ingredient 1",
-                    "3 tbsp Ingredient 2",
-                    "2 cups Ingredient 3"
-                ],
-                steps: [
-                    "Prepare ingredients",
-                    "Mix ingredients",
-                    "Cook until done"
-                ],
-                _createdOn: 1613551344360
-            },
-            "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-                name: "Roast Trout",
-                img: "assets/fish.jpg",
-                ingredients: [
-                    "4 cups Ingredient 1",
-                    "1 tbsp Ingredient 2",
-                    "1 tbsp Ingredient 3",
-                    "750 g  Ingredient 4",
-                    "25 g Ingredient 5"
-                ],
-                steps: [
-                    "Prepare ingredients",
-                    "Mix ingredients",
-                    "Cook until done"
-                ],
-                _createdOn: 1613551388703
-            }
-        },
         cars: {
             "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba": {
                 _id: "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba",
+                _createdOn: 1701339906127,
                 imageUrl: "https://i.pinimg.com/originals/c0/fa/83/c0fa838a091d36c650c1251343553b7d.jpg",
                 make: "Ford Mustang",
                 category: "Sport",
-                price: "150 000",
+                price: 80000,
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
             },
             "a5f74b67-aeae-4335-8cd3-dff4c689815f": {
                 _id: "a5f74b67-aeae-4335-8cd3-dff4c689815f",
+                _createdOn: 1701339906226,
                 imageUrl: "https://images.wallpaperscraft.com/image/single/ford_f150_raptor_99495_1920x1080.jpg",
                 make: "Ford F150",
                 category: "Off-Road",
-                price: "80 000",
+                price: 62000,
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
             },
             "a5f74b67-aeae-4335-8cd3-dff4c689813p": {
                 _id: "a5f74b67-aeae-4335-8cd3-dff4c689813p",
+                _createdOn: 1701339907926,
                 imageUrl: "https://images7.alphacoders.com/587/thumb-1920-587110.jpg",
                 make: "Chevrolet Camaro",
                 category: "Racing",
-                price: "120 000",
+                price: 95000,
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
             },
             "a5f74b67-aeae-4335-8cd3-dff4c689888r": {
                 _id: "a5f74b67-aeae-4335-8cd3-dff4c689888r",
+                _createdOn: 1701339106126,
                 imageUrl: "https://uhdwallpapers.org/uploads/converted/20/11/04/koenigsegg-jesko-absolut-1920x1080_947548-mm-90.jpg",
                 make: "Koenigsegg Jesko",
                 category: "Racing",
-                price: "1 120 000",
+                price: 1250000,
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+            },
+            "a5f74b67-aeae-4335-8cd3-dff4c6898834": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c6898834",
+                _createdOn: 1701339106236,
+                imageUrl: "https://stat.overdrive.in/wp-content/odgallery/2021/08/60860_2021_Mercedes_Benz_GLE-63-S-AMG-Coupe_4MATIC_Plus_1.jpg",
+                make: "Mercedes GLE 63 Coupe",
+                category: "Family",
+                price: 240000,
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+            },
+            "a5f74b67-aeae-4335-8cd3-dff4c68988op": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c68988op",
+                _createdOn: 1701339198236,
+                imageUrl: "https://wallpapersmug.com/download/3840x2160/f90f42/1969-ringbrothers-dodge-charger-defector-front-car.jpg",
+                make: "Dodge Charger 1969",
+                category: "Retro",
+                price: 125000,
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+            },
+            "a5f74b67-aeae-4335-8cd3-dff4c689arop": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689arop",
+                _createdOn: 1701339198290,
+                imageUrl: "https://www.cityam.com/wp-content/uploads/2022/11/BAZ_4428-1.jpg ",
+                make: "Porsche 911 GT2 RS",
+                category: "Sport",
+                price: 270000,
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+            },
+            "a5f74b67-aeae-4335-8cd3-dff4c689ar56": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689ar56",
+                _createdOn: 1701339298290,
+                imageUrl: "https://cdn.motor1.com/images/mgl/koYY0x/s1/2023-kia-sportage-hybrid.webp",
+                make: "Kia Sportage Hybrid",
+                category: "Family",
+                price: 70000,
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
+            },
+            "a5f74b67-aeae-4335-8cd3-dff4c689agtr": {
+                _id: "a5f74b67-aeae-4335-8cd3-dff4c689agtr",
+                _createdOn: 1701339298333,
+                imageUrl: "https://images.prismic.io/carwow/308bade4-bc03-4a29-a195-70631f39284a_2017+Nissan+GT-R+front+quarter+static.jpg",
+                make: "Nissan GTR",
+                category: "Sport",
+                price: 130000,
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
             },
         },
@@ -1459,6 +1455,14 @@
                 _createdOn: 1701340149334,
                 imageUrl: "https://w0.peakpx.com/wallpaper/721/6/HD-wallpaper-ferrari-in-dubai-car-cars-dark-dubai-exotic-ferrari-motors-motorsport-sport-sports-thumbnail.jpg",
                 location: "Paris, France",
+                summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
+            },
+            "0cf66b1c-4ed6-4bf3-94ee-ae4846b6abmw": {
+                _id: "0cf66b1c-4ed6-4bf3-94ee-ae4846b6abmw",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                _createdOn: 1701340149444,
+                imageUrl: "https://pbs.twimg.com/media/FujPulMWcAElQ3f?format=jpg&name=large",
+                location: "Gorna Oryahovitsa",
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natu.",
             },
         },
@@ -1497,6 +1501,20 @@
                 _createdOn: 1701619831694,
                 postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
                 text: "Niceee rims!"
+            },
+            "b8f15d3a-0cfe-45cc-8042-3441e79enowo": {
+                _id: "b8f15d3a-0cfe-45cc-8042-3441e79enowo",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                _createdOn: 1701619832694,
+                postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                text: "cena ?"
+            },
+            "b8f15d3a-0cfe-45cc-8042-3441e79eno99": {
+                _id: "b8f15d3a-0cfe-45cc-8042-3441e79eno99",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                _createdOn: 1701619842694,
+                postId: "01401ff1-206d-4aa6-837d-8b2bf0f46d47",
+                text: "moita puk e po hubaa"
             },
         },
     };
