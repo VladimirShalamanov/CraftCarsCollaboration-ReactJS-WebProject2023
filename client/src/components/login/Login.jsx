@@ -22,6 +22,7 @@ export default function Login() {
 
     const onSubmit = async (values, actions) => {
 
+        // await new Promise((resolve) => setTimeout(resolve, 3000));
         loginSubmitHandler(values);
 
         if (!isAuthenticated) {
@@ -29,10 +30,7 @@ export default function Login() {
         } else {
             actions.resetForm();
             toastRef.current.showToast("Logged in succesfully!");
-            
         }
-
-        // await new Promise((resolve) => setTimeout(resolve, 3000));
     };
 
     return (

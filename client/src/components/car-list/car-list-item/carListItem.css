@@ -2,8 +2,9 @@
     flex-basis: 45%;
     display: flex;
     color: black;
-    background-color: white;
-    border: 3px solid white;
+    background-color: rgba(183, 178, 178, 0.453);
+    backdrop-filter: blur(20px);
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 30px;
     cursor: pointer;
     overflow: hidden;
