@@ -3,8 +3,32 @@
 }
 
 .car-catalog-page .title {
-    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    gap: 1em;
+    padding: 2em 0;
+    width: 600px;
+    border-radius: 20px;
+    background-color: rgba(70, 75, 84, 0.282);
 }
+
+.car-catalog-page input {
+    width: 350px;
+    padding: 0.65rem 0.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #9494a3;
+    border: 4px solid #354053;
+    border-radius: 10px;
+    outline: none;
+}
+
+.car-catalog-page input:focus {
+    border-color: #4299e1;
+}
+
+
 
 .car-list {
     display: flex;
