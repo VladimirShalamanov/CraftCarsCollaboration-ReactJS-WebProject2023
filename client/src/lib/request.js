@@ -16,7 +16,7 @@ const buildOptions = (data) => {
             'X-Authorization': token,
         };
     }
-    
+
     return options;
 };
 

@@ -8,10 +8,7 @@ import logo from "../../assets/general-img/logo-ccc.png";
 import "./header.css";
 
 export default function Header() {
-    const {
-        isAuthenticated,
-        username,
-    } = useContext(AuthContext);
+    const { isAuthenticated, username } = useContext(AuthContext);
 
     const [menu, setMenu] = useState("nav_menu");
     const [toogleIcon, setToogleIcon] = useState("nav_toogle");

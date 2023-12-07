@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import { React, useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Formik, Form } from 'formik';
 
@@ -6,9 +6,10 @@ import { loginSchema } from "../../lib/yupValidator";
 import CustomInput from "../_custom-inputs/CustomInput";
 import authContext from "../../contexts/authContext";
 import Path from "../../utils/paths";
-// import useForm from "../../hooks/useForm";
 
+import ReactToast from "../_custom-toasts/ReactToast";
 import "../register/register.css";
+// import useForm from "../../hooks/useForm";
 
 const LoFoKeys = {
     Email: 'email',
@@ -16,18 +17,28 @@ const LoFoKeys = {
 };
 
 export default function Login() {
-    const { loginSubmitHandler } = useContext(authContext);
+    const toastRef = useRef();
+    const { loginSubmitHandler, isAuthenticated } = useContext(authContext);
 
     const onSubmit = async (values, actions) => {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
 
         loginSubmitHandler(values);
 
-        actions.resetForm();
+        if (!isAuthenticated) {
+            toastRef.current.showToast("Login or password don't match!");
+        } else {
+            actions.resetForm();
+            toastRef.current.showToast("Logged in succesfully!");
+            
+        }
+
+        // await new Promise((resolve) => setTimeout(resolve, 3000));
     };
 
     return (
         <section className="login-page">
+
+            <ReactToast ref={toastRef} timeout={3000} />
             <div className="container">
                 <h1>Login</h1>
 

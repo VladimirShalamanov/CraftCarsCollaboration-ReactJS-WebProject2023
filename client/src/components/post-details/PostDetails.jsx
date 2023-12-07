@@ -15,7 +15,7 @@ export default function PostDetails() {
     const navigate = useNavigate();
     const { postId } = useParams();
     // set username from context
-    const { userId, email, isAuthenticated } = useContext(AuthContext);
+    const { userId, email, username, isAuthenticated } = useContext(AuthContext);
 
     const [post, setPost] = useState({});
     const [comments, dispatch] = useReducer(reducer, []);
@@ -74,7 +74,7 @@ export default function PostDetails() {
             <div className="info-section">
                 <div className="general-info">
                     <div className="user-info">
-                        <h5>Username!</h5>
+                        <h5>{username}</h5>
                         <h6>{post.location}</h6>
                         <p className="date">{post._updatedOn
                             ? 'edited on ' + formatDateAndHour(post._updatedOn)
