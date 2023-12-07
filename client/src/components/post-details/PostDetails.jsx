@@ -14,8 +14,7 @@ import "./postDetails.css";
 export default function PostDetails() {
     const navigate = useNavigate();
     const { postId } = useParams();
-    // set username from context
-    const { userId, email, username, isAuthenticated } = useContext(AuthContext);
+    const { userId, username, isAuthenticated } = useContext(AuthContext);
 
     const [post, setPost] = useState({});
     const [comments, dispatch] = useReducer(reducer, []);
@@ -43,8 +42,7 @@ export default function PostDetails() {
             values.comment,
         );
 
-        // Username view is correct
-        newComment.owner = { email };
+        newComment.owner = { username };
 
         dispatch({
             type: 'ADD_COMMENT',
@@ -74,7 +72,7 @@ export default function PostDetails() {
             <div className="info-section">
                 <div className="general-info">
                     <div className="user-info">
-                        <h5>{username}</h5>
+                        <h5>Server not provide relation with the owner</h5>
                         <h6>{post.location}</h6>
                         <p className="date">{post._updatedOn
                             ? 'edited on ' + formatDateAndHour(post._updatedOn)
@@ -93,9 +91,9 @@ export default function PostDetails() {
 
                 <div className="comments-section">
                     <ul>
-                        {comments.map(({ _id, text, _createdOn, owner: { email } }) => (
+                        {comments.map(({ _id, text, _createdOn, owner: { username } }) => (
                             <li key={_id} className="comment">
-                                <p><span>{email}</span> {text}</p>
+                                <p><span>{username}</span> {text}</p>
                                 <p className="date">{formatDate(_createdOn)}</p>
                             </li>
                         ))}

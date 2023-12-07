@@ -10,7 +10,17 @@ export const getAll = async () => {
 
 export const getOne = async (postId) => {
     const result = await request.get(`${baseUrl}/${postId}`);
-    
+
+    return result;
+};
+
+export const getPostWithOwner = async (postId) => {
+    const query = new URLSearchParams({
+        where: `_id="${postId}"`,
+        load: `owner=_ownerId:users`,
+    });
+    const result = await request.get(`${baseUrl}?${query.toString()}`);
+
     return result;
 };
 
