@@ -7,7 +7,6 @@ export default function CarListItem({
     _id,
     make,
     imageUrl,
-    category,
     price,
 }) {
     return (
@@ -16,7 +15,6 @@ export default function CarListItem({
 
             <div className="intro">
                 <h4>{make}</h4>
-                <h5>{category}</h5>
                 <p>{price}</p>
             </div>
             {/* <Link to={pathToUrl(Path.GameDetails, { gameId: _id })} className="details-button">Details</Link> */}

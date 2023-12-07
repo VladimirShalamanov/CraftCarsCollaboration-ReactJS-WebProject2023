@@ -9,7 +9,7 @@ export default function CarQuickView() {
 
     // Get Action parametar for quick view
     useEffect(() => {
-        carService.getAll()
+        carService.getForQuickView()
             .then(res => setQuickCar(res));
     }, []);
 
