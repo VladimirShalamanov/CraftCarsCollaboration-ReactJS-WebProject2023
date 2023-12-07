@@ -58,7 +58,7 @@ export default function CarList() {
 
                 {!cars.length && <h4 className="empty-articles">No cars yet!</h4>}
 
-                {!filteredResults.length && searchInput && <h4 className="empty-articles">No car contains these letters!</h4>}
+                {!filteredResults.length && searchInput && cars && <h4 className="empty-articles">No car contains these letters!</h4>}
 
             </div>
 

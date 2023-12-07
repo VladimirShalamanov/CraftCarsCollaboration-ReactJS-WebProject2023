@@ -3,6 +3,11 @@ import * as request from "../lib/request";
 const baseUrl = 'http://localhost:3030/data/cars';
 
 export const getAll = async () => {
+    // const query = new encodeURIComponent({
+    //     select: `_id,imageUrl,make,price`,
+    // });
+    // const result = await request.get(`${baseUrl}?${query}`);
+
     const result = await request.get(`${baseUrl}?select=_id%2CimageUrl%2Cmake%2Cprice`);
 
     return result;
@@ -15,13 +20,25 @@ export const getOne = async (carId) => {
 };
 
 export const getByString = async (carString) => {
+    // const query = new encodeURIComponent({
+    //     where: `make LIKE "${carString}"`,
+    //     select: `_id,imageUrl,make,price`,
+    // });
+    // const result = await request.get(`${baseUrl}?${query}`);
+
     const result = await request.get(`${baseUrl}?where=make LIKE "${carString}"&select=_id%2CimageUrl%2Cmake%2Cprice`);
 
     return result;
 };
 
 export const getForQuickView = async () => {
-    const result = await request.get(`${baseUrl}?offset=0&pageSize=4&select=_id%2CimageUrl%2Cmake`);
+    const query = new URLSearchParams({
+        offset: 0,
+        pageSize: 4,
+        select: `_id,imageUrl,make`,
+    });
+
+    const result = await request.get(`${baseUrl}?${query}`);
 
     return result;
 };
