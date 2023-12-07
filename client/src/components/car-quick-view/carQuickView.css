@@ -1,17 +1,22 @@
 .car-quick-view .message {
+    margin: 0 auto;
     text-align: center;
+    width: 500px;
     padding: 100px 0 50px 0;
 }
 
 .car-quick-view .message h2 {
-    padding: 10px;
+    padding: 20px 0;
     color: white;
-    background-color: skyblue;
+    font-weight: bold;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: rgba(23, 161, 215, 0.522);
+    backdrop-filter: blur(30px);
 }
 
 .car-quick-list {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-evenly;
     gap: 3em;
 }

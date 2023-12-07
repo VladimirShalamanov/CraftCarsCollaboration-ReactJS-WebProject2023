@@ -33,12 +33,12 @@ export const getByString = async (carString) => {
 
 export const getForQuickView = async () => {
     const query = new URLSearchParams({
+        select: `_id,imageUrl,make,price`,
         offset: 0,
         pageSize: 4,
-        select: `_id,imageUrl,make`,
     });
 
-    const result = await request.get(`${baseUrl}?${query}`);
+    const result = await request.get(`${baseUrl}?sortBy=price%20desc&${query}`);
 
     return result;
 };

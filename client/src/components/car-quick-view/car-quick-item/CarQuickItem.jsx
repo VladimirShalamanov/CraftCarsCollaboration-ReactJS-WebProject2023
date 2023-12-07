@@ -2,9 +2,10 @@ import "./carQuickItem.css";
 
 export default function CarQuickItem({
     _id,
+    imageUrl,
     make,
     category,
-    imageUrl,
+    price,
 }) {
     return (
         <div className="car-quick-item">
@@ -13,6 +14,7 @@ export default function CarQuickItem({
             <div className="intro">
                 <h3>{make}</h3>
                 <h4>{category}</h4>
+                <h4>{price}</h4>
             </div>
         </div>
     );

@@ -7,7 +7,6 @@ import "./carQuickView.css";
 export default function CarQuickView() {
     const [quickCar, setQuickCar] = useState([]);
 
-    // Get Action parametar for quick view
     useEffect(() => {
         carService.getForQuickView()
             .then(res => setQuickCar(res));
@@ -16,7 +15,7 @@ export default function CarQuickView() {
     return (
         <article className="car-quick-view">
             <div className="message">
-                <h2>Action parametar</h2>
+                <h2>Most expensive cars</h2>
             </div>
 
             <div className="car-quick-list">
