@@ -8,10 +8,11 @@ import GuestGuard from './components/guards/GuestGuard';
 import ErrorBoundary from './components/error-boundary/ErrorBoundary';
 import Path from './utils/paths';
 
-import MyProfile from './components/my-profile/MyProfile';
+import PageNotFound from './components/error-pages/PageNotFound';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
 import Logout from './components/logout/Logout';
+import MyProfile from './components/my-profile/MyProfile';
 
 import Header from './components/header/Header';
 import AboutUs from './components/about-us/AboutUs';
@@ -57,6 +58,8 @@ export default function App() {
                                 <Route path={Path.Login} element={<Login />} />
                                 <Route path={Path.Register} element={<Register />} />
                             </Route>
+
+                            <Route path={Path.PageNotFound} element={<PageNotFound />} />
                         </Routes>
                     </main>
 
