@@ -32,10 +32,10 @@ export default function PostCreate() {
                     <h1>Create Post</h1>
 
                     <label htmlFor="post-image">Image</label>
-                    <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload your image..." />
+                    <input type="text" id="imageUrl" name="imageUrl" required placeholder="Upload your image..." />
 
                     <label htmlFor="post-location">Location</label>
-                    <input type="text" id="location" name="location" placeholder="Bulgaria..." />
+                    <input type="text" id="location" name="location" required placeholder="Bulgaria..." />
 
                     <label htmlFor="post-summary">Summary</label>
                     <textarea id="summary" name="summary" placeholder="Write something..." ></textarea>
