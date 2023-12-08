@@ -20,3 +20,8 @@ main> :not(.home) {
     background-attachment: fixed;
     background-size: cover;
 }
+
+.empty-articles {
+    font-size: 40px;
+    color: magenta;
+}
