@@ -38,21 +38,21 @@ In the car catalog has search bar and every user can look quickly the car which 
 
 
 Short information to run the project
-Server
-1
-node .\server.js
-App
-2
-npm run build
-3
-npm run dev
+    Server
+    1
+    node .\server.js
+    App
+    2
+    npm run build
+    3
+    npm run dev
 
 The server has some seeded user like a:
-email: peter@abv.bg
-password: 123456
-&
-email: george@abv.bg
-password: 123456
+    email: peter@abv.bg
+    password: 123456
+    &
+    email: george@abv.bg
+    password: 123456
 
 If you want to create a account - you should know that:
 
