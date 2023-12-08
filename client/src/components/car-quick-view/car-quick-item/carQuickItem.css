@@ -1,10 +1,11 @@
 .car-quick-item {
     width: 350px;
     height: 500px;
-    background-color: skyblue;
-    border: 4px solid white;
-    border-bottom-left-radius: 100px;
-    cursor: pointer;
+    background-color: rgba(157, 225, 251, 0.467);
+    backdrop-filter: blur(20px);
+    border: 2px solid white;
+    border-bottom-right-radius: 75px;
+    border-top-left-radius: 75px;
     overflow: hidden;
 }
 
@@ -20,8 +21,30 @@
 
 .car-quick-item .intro {
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2em;
     padding-top: 50px;
+}
+
+.car-quick-item .intro h3 {
+    font: bold 1.8em 'sans-serif';
+}
+
+.car-quick-item .intro svg {
+    width: 30px;
+    height: 20px;
+    padding: 10px;
+    color: skyblue;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.car-quick-item .intro svg:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
 }
