@@ -11,7 +11,7 @@ export default function PostListItem({
     return (
         <div className="post-item">
             <img src={imageUrl} />
-            <Link to={pathToUrl(Path.PostDetails, { postId: _id })} className="details"></Link>
+            <Link to={pathToUrl(Path.PostDetails, { postId: _id })} className="details" />
         </div>
     );
 };

@@ -18,6 +18,18 @@ export const getOne = async (postId) => {
     return result;
 };
 
+export const getMostRecent = async (postId) => {
+    const query = new URLSearchParams({
+        select: `_id,imageUrl`,
+        offset: 0,
+        pageSize: 4,
+    });
+
+    const result = await request.get(`${baseUrl}?sortBy=_createdOn%20desc&${query}`);
+
+    return result;
+};
+
 // export const getPostWithOwner = async (postId) => {
 //     const query = new URLSearchParams({
 //         where: `_id="${postId}"`,
