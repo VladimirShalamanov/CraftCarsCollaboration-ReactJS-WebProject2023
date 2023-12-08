@@ -1,0 +1,62 @@
+/* .car-detail-page {
+    display: flex;
+    justify-content: center;
+} */
+
+.car-detail-page .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 1em;
+    border-radius: 30px;
+    background-color: rgba(239, 191, 228, 0.47);
+    backdrop-filter: blur(30px);
+}
+
+.car-detail-page .intro-car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.car-detail-page .intro-car .title,
+.car-detail-page .car-info .title {
+    font: bold 35px 'Courier New', Courier, monospace;
+}
+
+.car-characteristic {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-characteristic p {
+    font: bold 1.8em 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.car-detail-page img {
+    width: 900px;
+    height: 506px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.car-detail-page .car-info {
+    width: 50vw;
+    text-align: center;
+}
+
+.car-detail-page .car-info p {
+    font: 18px/1.8 sans-serif;
+}
+
+.car-detail-page .car-info span {
+    font: bold 20px sans-serif;
+}

@@ -1353,8 +1353,8 @@
             "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba": {
                 _id: "e36b2896-0b2a-48a6-ab13-18ea8be3c9ba",
                 _createdOn: 1701339906127,
-                imageUrl: "https://i.pinimg.com/originals/c0/fa/83/c0fa838a091d36c650c1251343553b7d.jpg",
-                make: "Ford Mustang",
+                imageUrl: "https://wallpapersmug.com/download/1600x900/aeee19/green-ford-mustang-shelby-gt500.jpg",
+                make: "Ford Shelby GT500",
                 category: "Sport",
                 price: 80000,
                 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
