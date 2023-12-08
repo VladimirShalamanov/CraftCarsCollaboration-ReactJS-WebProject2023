@@ -24,8 +24,8 @@ export default function Login() {
     }, [Path.Login]);
 
     const onSubmit = async (values, actions) => {
-
         // await new Promise((resolve) => setTimeout(resolve, 3000));
+
         loginSubmitHandler(values);
 
         if (!isAuthenticated) {
@@ -39,7 +39,7 @@ export default function Login() {
     return (
         <section className="login-page">
 
-            <ReactToast ref={toastRef} timeout={3000} />
+            <ReactToast ref={toastRef} timeout={4000} />
             <div className="container">
                 <h1>Login</h1>
 
