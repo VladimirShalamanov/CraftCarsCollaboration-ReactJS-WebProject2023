@@ -1,0 +1,26 @@
+.post-quick-view .message {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    padding: 100px 0 50px 0;
+}
+
+.post-quick-view .message h2 {
+    padding: 20px 0;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: rgba(190, 39, 190, 0.558);
+    backdrop-filter: blur(30px);
+}
+
+.post-quick-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3em;
+}
+
+.post-quick-list .empty-articles {
+    padding: 50px 0;
+}
