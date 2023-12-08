@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import * as postService from "../../services/postService";
@@ -5,6 +6,10 @@ import Path from "../../utils/paths";
 
 export default function PostCreate() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [Path.PostCreate]);
 
     const onSubmitCreateGame = async (e) => {
         e.preventDefault();

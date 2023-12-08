@@ -18,6 +18,8 @@ export default function PostEdit() {
     useEffect(() => {
         postService.getOne(postId)
             .then(res => setPost(res));
+
+        window.scrollTo(0, 0);
     }, [postId]);
 
     const onSubmitEditPost = async (e) => {

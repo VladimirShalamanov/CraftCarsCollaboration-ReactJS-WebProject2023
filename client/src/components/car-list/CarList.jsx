@@ -13,12 +13,16 @@ export default function CarList() {
         carService.getAll()
             .then((res) => setCars(res))
             .catch(error => console.log(error));
+
+        window.scrollTo(0, 0);
     }, []);
 
     useEffect(() => {
         carService.getByString(searchInput)
             .then((res) => setFilteredResults(res))
             .catch(error => console.log(error));
+
+        window.scrollTo(0, 0);
     }, [cars, searchInput]);
 
     return (

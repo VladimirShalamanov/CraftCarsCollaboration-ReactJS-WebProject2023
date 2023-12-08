@@ -30,6 +30,8 @@ export default function PostDetails() {
                     payload: res,
                 });
             });
+            
+        window.scrollTo(0, 0);
     }, [postId]);
 
     const addCommentHandler = async (values) => {

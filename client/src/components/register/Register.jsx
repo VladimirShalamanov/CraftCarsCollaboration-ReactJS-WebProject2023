@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Formik, Form } from 'formik';
 
@@ -21,6 +21,10 @@ const ReFoKeys = {
 
 export default function Register() {
     const { registerSubmitHandler } = useContext(AuthContext);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [Path.Register]);
 
     const onSubmit = async (values, actions) => {
         await new Promise((resolve) => setTimeout(resolve, 2000));

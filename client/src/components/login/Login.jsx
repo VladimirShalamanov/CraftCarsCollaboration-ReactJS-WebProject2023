@@ -1,4 +1,4 @@
-import { React, useContext, useRef } from "react";
+import { React, useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Formik, Form } from 'formik';
 
@@ -19,6 +19,10 @@ const LoFoKeys = {
 export default function Login() {
     const toastRef = useRef();
     const { loginSubmitHandler, isAuthenticated } = useContext(authContext);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [Path.Login]);
 
     const onSubmit = async (values, actions) => {
 

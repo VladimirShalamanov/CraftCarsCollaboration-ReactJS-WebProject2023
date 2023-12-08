@@ -17,6 +17,8 @@ export default function MyProfile() {
         postService.getMine(userId)
             .then(res => setPosts(res))
             .catch(error => console.log(error));
+
+        window.scrollTo(0, 0);
     }, []);
 
     return (

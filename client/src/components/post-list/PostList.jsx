@@ -12,6 +12,8 @@ export default function PostList() {
         postService.getAll()
             .then(res => setPosts(res))
             .catch(error => console.log(error));
+
+        window.scrollTo(0, 0);
     }, []);
 
     return (
