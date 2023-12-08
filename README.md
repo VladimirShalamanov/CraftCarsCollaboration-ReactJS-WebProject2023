@@ -38,6 +38,7 @@ In the car catalog has search bar and every user can look quickly the car which 
 
 
 Short information to run the project
+
     Server
     1
     node .\server.js
@@ -48,6 +49,7 @@ Short information to run the project
     npm run dev
 
 The server has some seeded user like a:
+
     email: peter@abv.bg
     password: 123456
     &
