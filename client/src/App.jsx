@@ -20,6 +20,8 @@ import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 
 import CarList from './components/car-list/CarList';
+import CarDetails from './components/car-details/CarDetails';
+
 import PostList from './components/post-list/PostList';
 import PostDetails from './components/post-details/PostDetails';
 import PostCreate from './components/post-create/PostCreate';
@@ -42,6 +44,7 @@ export default function App() {
                             <Route path={Path.Home} element={<Home />} />
 
                             <Route path={Path.CarList} element={<CarList />} />
+                            <Route path={Path.CarDetails} element={<CarDetails />} />
 
                             <Route path={Path.PostList} element={<PostList />} />
                             <Route path={Path.PostDetails} element={<PostDetails />} />

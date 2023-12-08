@@ -5,7 +5,7 @@ const Path = {
     MyProfile: '/profile',
 
     CarList: '/cars',
-    // CarDetails: '/cars/:carId',
+    CarDetails: '/cars/:carId',
     
     PostList: '/posts',
     PostDetails: '/posts/:postId',
