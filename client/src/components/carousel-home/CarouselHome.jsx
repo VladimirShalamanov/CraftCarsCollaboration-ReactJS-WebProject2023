@@ -30,13 +30,13 @@ const VideoCarousel = () => {
     return (
         // <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel>
-            <Carousel.Item interval={5000}>
+            <Carousel.Item interval={10000}>
                 <img src={img1} alt="1" />
             </Carousel.Item>
-            <Carousel.Item interval={5000}>
+            <Carousel.Item interval={1000}>
                 <img src={img2} alt="2" />
             </Carousel.Item>
-            <Carousel.Item interval={5000}>
+            <Carousel.Item interval={1000}>
                 <img src={img3} alt="3" />
             </Carousel.Item>
         </Carousel>

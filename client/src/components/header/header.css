@@ -23,7 +23,7 @@ header .backdrop_active {
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     transition: 1s ease-in-out;
 }
 
@@ -31,19 +31,49 @@ header .backdrop_active {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2em;
+    text-align: center;
     z-index: 10;
-    /* top: 0; */
-    /* right: 0; */
-    width: 60%;
-    height: 300px;
-    background: rgb(212, 77, 171);
+    width: 90%;
+    height: 350px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.409);
+    background: rgba(87, 81, 81, 0.204);
+    backdrop-filter: blur(15px);
     transform: translateY(-110%);
     transition: 0.5s ease-in-out;
 }
 
 .nav_active {
     transform: translateY(-10%);
+}
+
+.nav_menu .web-link,
+.nav_menu .user-link,
+.nav_menu .profile-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.nav_menu span {
+    font-size: 1em;
+    color: skyblue;
+}
+
+.nav_menu a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: skyblue;
+    text-decoration: none;
+}
+
+.nav_menu a:hover {
+    text-decoration: underline overline;
+}
+
+.nav_menu .logout {
+    color: red;
 }
 
 .nav_toogle div {

@@ -44,23 +44,29 @@ export default function Header() {
             <div className={backdrop} onClick={onClickNavClose}></div>
 
             <nav className={menu}>
-                <Link to={Path.CarList} onClick={onClickNavClose}>Models</Link>
-                <Link to={Path.PostList} onClick={onClickNavClose}>Posts</Link>
-                <Link to={Path.AboutUs} onClick={onClickNavClose}>About Us</Link>
+                <div className='web-link'>
+                    <Link to={Path.Home} onClick={onClickNavClose}>Home</Link>
+                    <Link to={Path.AboutUs} onClick={onClickNavClose}>About Us</Link>
+                </div>
+
+                <div className='user-link'>
+                    <Link to={Path.PostList} onClick={onClickNavClose}>Posts</Link>
+                    <Link to={Path.CarList} onClick={onClickNavClose}>Models</Link>
+                </div>
 
                 {isAuthenticated && (
-                    <div className="user">
+                    <div className='profile-link'>
+                        <span>Welcome Back {username}</span>
                         <Link to={Path.MyProfile} onClick={onClickNavClose}>My Profile</Link>
-                        <Link to={Path.Logout} onClick={onClickNavClose}>Logout</Link>
-                        <span>- {username}</span>
+                        <Link to={Path.Logout} onClick={onClickNavClose} className='logout'>Logout</Link>
                     </div>
                 )}
-                {!isAuthenticated &&
-                    <div className="guest">
+                {!isAuthenticated && (
+                    <div className='profile-link'>
                         <Link to={Path.Login} onClick={onClickNavClose}>Login</Link>
                         <Link to={Path.Register} onClick={onClickNavClose}>Register</Link>
                     </div>
-                }
+                )}
             </nav>
 
             <div onClick={onClickNavToogle} className={toogleIcon}>
