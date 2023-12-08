@@ -7,7 +7,6 @@ import CustomCheckbox from "../_custom-inputs/CustomCheckbox";
 import CustomInput from "../_custom-inputs/CustomInput";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../utils/paths";
-// import useForm from "../../hooks/useForm";
 
 import "./register.css";
 
@@ -36,12 +35,6 @@ export default function Register() {
         actions.resetForm();
     };
 
-    // const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
-    //     [ReFoKeys.Email]: '',
-    //     [ReFoKeys.Password]: '',
-    //     [ReFoKeys.CoPassword]: '',
-    // });
-
     return (
         <section className="register-page">
             <div className="container">
@@ -61,6 +54,7 @@ export default function Register() {
                                 name={ReFoKeys.Email}
                                 placeholder="Enter your email"
                             />
+
                             <CustomInput
                                 label="Username"
                                 id={ReFoKeys.Username}
@@ -68,6 +62,7 @@ export default function Register() {
                                 type={ReFoKeys.Username}
                                 placeholder="Enter your username"
                             />
+
                             <CustomInput
                                 label="Password"
                                 id={ReFoKeys.Password}
@@ -76,6 +71,7 @@ export default function Register() {
                                 autoComplete="off"
                                 placeholder="Enter your password"
                             />
+
                             <CustomInput
                                 label="Confirm Password"
                                 id={ReFoKeys.CoPassword}
@@ -84,17 +80,6 @@ export default function Register() {
                                 autoComplete="off"
                                 placeholder="Enter again your password"
                             />
-                            {/* <CustomSelect
-                        label="Job Type"
-                        name="jobType"
-                        placeholder="Please select a job"
-                    >
-                        <option value="">Please select a job type</option>
-                        <option value="developer">Developer</option>
-                        <option value="designer">Designer</option>
-                        <option value="manager">Product Manager</option>
-                        <option value="other">Other</option>
-                    </CustomSelect> */}
 
                             <CustomCheckbox
                                 type='checkbox'

@@ -18,7 +18,7 @@ export const getOne = async (postId) => {
     return result;
 };
 
-export const getMostRecent = async (postId) => {
+export const getMostRecent = async () => {
     const query = new URLSearchParams({
         select: `_id,imageUrl`,
         offset: 0,

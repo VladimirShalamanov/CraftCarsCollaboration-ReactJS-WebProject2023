@@ -9,7 +9,6 @@
     border-bottom-right-radius: 75px;
     border-top-left-radius: 75px;
     overflow: hidden;
-    /* cursor: pointer; */
 }
 
 .post-quick-item img {
@@ -30,5 +29,5 @@
     background-color: transparent;
     border-bottom-right-radius: 75px;
     border-top-left-radius: 75px;
-    /* cursor: pointer; */
+    cursor: pointer;
 }

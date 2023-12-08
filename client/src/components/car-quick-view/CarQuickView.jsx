@@ -2,13 +2,14 @@ import { React, useEffect, useState } from "react";
 
 import * as carService from "../../services/carService";
 import CarQuickItem from "./car-quick-item/CarQuickItem";
+
 import "./carQuickView.css";
 
 export default function CarQuickView() {
     const [quickCar, setQuickCar] = useState([]);
 
     useEffect(() => {
-        carService.getForQuickView()
+        carService.getMostExpensive()
             .then(res => setQuickCar(res));
     }, []);
 

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { pathToUrl } from "../../../utils/pathFix";
 import Path from "../../../utils/paths";
+
 import "./postListItem.css";
 
 export default function PostListItem({

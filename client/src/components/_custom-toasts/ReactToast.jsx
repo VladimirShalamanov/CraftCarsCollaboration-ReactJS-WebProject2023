@@ -1,5 +1,6 @@
-import React, { useState, forwardRef, useImperativeHandle } from "react"
-import "./toast.css"
+import React, { useState, forwardRef, useImperativeHandle } from "react";
+
+import "./toast.css";
 
 function ReactToast({ timeout = 1500 }, ref) {
     const [show, setShow] = useState(false)

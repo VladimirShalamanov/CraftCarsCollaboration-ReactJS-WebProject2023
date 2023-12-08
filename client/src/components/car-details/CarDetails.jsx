@@ -1,17 +1,12 @@
-import { useContext, useEffect, useReducer, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 import * as carService from "../../services/carService";
-import AuthContext from "../../contexts/authContext";
-import Path from "../../utils/paths";
 
 import "./carDetails.css";
 
 export default function CarDetails() {
-    const navigate = useNavigate();
     const { carId } = useParams();
-    const { userId, username, isAuthenticated } = useContext(AuthContext);
 
     const [car, setCar] = useState({});
 
@@ -25,6 +20,7 @@ export default function CarDetails() {
     return (
         <section className="car-detail-page">
             <div className="container">
+
                 <div className="intro-car">
                     <h1 className="title">Do you hesitate?</h1>
                     <h4>Come to us for a test drive of a {car.make} completely free of charge.</h4>
@@ -44,11 +40,21 @@ export default function CarDetails() {
                     <span>Get it now for {car.price} BGN</span>
                 </div>
 
-
-
-
-
             </div>
         </section>
     );
 };
+
+// For future update
+
+{/* <CustomSelect
+    label="Job Type"
+    name="jobType"
+    placeholder="Please select a job"
+>
+    <option value="">Please select a job type</option>
+    <option value="developer">Developer</option>
+    <option value="designer">Designer</option>
+    <option value="manager">Product Manager</option>
+    <option value="other">Other</option>
+</CustomSelect> */}

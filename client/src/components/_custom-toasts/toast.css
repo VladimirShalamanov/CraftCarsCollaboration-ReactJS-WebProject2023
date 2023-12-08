@@ -10,6 +10,7 @@
     transform: translateX(-500px);
     transition: 0.7s;
 }
+
 .react-toast-container.show {
     transform: translateX(0px);
 }

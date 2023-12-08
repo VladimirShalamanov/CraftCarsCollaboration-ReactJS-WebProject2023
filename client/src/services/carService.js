@@ -31,7 +31,7 @@ export const getByString = async (carString) => {
     return result;
 };
 
-export const getForQuickView = async () => {
+export const getMostExpensive = async () => {
     const query = new URLSearchParams({
         select: `_id,imageUrl,make,price`,
         offset: 0,

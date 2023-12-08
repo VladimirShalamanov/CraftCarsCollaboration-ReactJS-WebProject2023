@@ -6,10 +6,9 @@ import { loginSchema } from "../../lib/yupValidator";
 import CustomInput from "../_custom-inputs/CustomInput";
 import authContext from "../../contexts/authContext";
 import Path from "../../utils/paths";
-
 import ReactToast from "../_custom-toasts/ReactToast";
+
 import "../register/register.css";
-// import useForm from "../../hooks/useForm";
 
 const LoFoKeys = {
     Email: 'email',

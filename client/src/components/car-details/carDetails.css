@@ -1,8 +1,3 @@
-/* .car-detail-page {
-    display: flex;
-    justify-content: center;
-} */
-
 .car-detail-page .container {
     display: flex;
     flex-direction: column;
