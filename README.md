@@ -65,4 +65,4 @@ If you want to create a account - you should know that:
 1 - use new email and username (first and last name, because it displayed in post).
 
 2 - crete a strong password -
-With minimum of 5 characters one uppercase letter one lowercase letter and 1 digit.
+With minimum of 5 characters, that have one digit, one uppercase and one lowercase letter.
