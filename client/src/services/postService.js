@@ -1,6 +1,7 @@
 import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/data/posts';
+// const baseUrl = 'http://localhost:3030/data/posts';
+const baseUrl = `${import.meta.env.VITE_API_URL}/data/posts`;
 
 export const getAll = async () => {
     const query = new URLSearchParams({
